@@ -13,6 +13,10 @@
 		635B2F4821038ACE000D07D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635B2F4621038ACE000D07D2 /* Main.storyboard */; };
 		635B2F5421038ACE000D07D2 /* UniBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B2F5321038ACE000D07D2 /* UniBarTests.swift */; };
 		635B2F5F21038ACE000D07D2 /* UniBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B2F5E21038ACE000D07D2 /* UniBarUITests.swift */; };
+		63D56D4121039B6A0058ED77 /* uniSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D56D4021039B6A0058ED77 /* uniSearchBar.swift */; };
+		B466BE565E35025C79F8603C /* Pods_UniBarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D6C3615526FAC6969DF067 /* Pods_UniBarTests.framework */; };
+		EA15C9B7BB129BBFD383D091 /* Pods_UniBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53001BAEA1AB6D36A997A60D /* Pods_UniBar.framework */; };
+		F0BB65B1DCEDC0D1866D3B8E /* Pods_UniBarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0109993ECF5753C2C21E1B56 /* Pods_UniBarUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0109993ECF5753C2C21E1B56 /* Pods_UniBarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniBarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14CB96086FDE41A03EF2EC8A /* Pods-UniBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniBar/Pods-UniBar.debug.xcconfig"; sourceTree = "<group>"; };
+		221E1A2F444BAFA58C872DDC /* Pods-UniBarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarUITests/Pods-UniBarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		38191BD8B94361548E36A8F8 /* Pods-UniBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniBar/Pods-UniBar.release.xcconfig"; sourceTree = "<group>"; };
+		53001BAEA1AB6D36A997A60D /* Pods_UniBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B2F3D21038ACC000D07D2 /* UniBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B2F4021038ACC000D07D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635B2F4221038ACC000D07D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +55,11 @@
 		635B2F5A21038ACE000D07D2 /* UniBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B2F5E21038ACE000D07D2 /* UniBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniBarUITests.swift; sourceTree = "<group>"; };
 		635B2F6021038ACE000D07D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63D56D4021039B6A0058ED77 /* uniSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = uniSearchBar.swift; path = Classes/uniSearchBar.swift; sourceTree = "<group>"; };
+		6FC10BCF8D19DD9C568C2AA8 /* Pods-UniBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarTests/Pods-UniBarTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F5BCE140D26ECD9B4FD4CC3 /* Pods-UniBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarUITests/Pods-UniBarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B037FD73465A64EF16C29B59 /* Pods-UniBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarTests/Pods-UniBarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6D6C3615526FAC6969DF067 /* Pods_UniBarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniBarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA15C9B7BB129BBFD383D091 /* Pods_UniBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B466BE565E35025C79F8603C /* Pods_UniBarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,12 +83,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0BB65B1DCEDC0D1866D3B8E /* Pods_UniBarUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		136BE8242CC01C55B00FE2B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14CB96086FDE41A03EF2EC8A /* Pods-UniBar.debug.xcconfig */,
+				38191BD8B94361548E36A8F8 /* Pods-UniBar.release.xcconfig */,
+				B037FD73465A64EF16C29B59 /* Pods-UniBarTests.debug.xcconfig */,
+				6FC10BCF8D19DD9C568C2AA8 /* Pods-UniBarTests.release.xcconfig */,
+				221E1A2F444BAFA58C872DDC /* Pods-UniBarUITests.debug.xcconfig */,
+				9F5BCE140D26ECD9B4FD4CC3 /* Pods-UniBarUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4850F5602DED22B2C2D6386D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53001BAEA1AB6D36A997A60D /* Pods_UniBar.framework */,
+				C6D6C3615526FAC6969DF067 /* Pods_UniBarTests.framework */,
+				0109993ECF5753C2C21E1B56 /* Pods_UniBarUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		635B2F3421038ACC000D07D2 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +120,8 @@
 				635B2F5221038ACE000D07D2 /* UniBarTests */,
 				635B2F5D21038ACE000D07D2 /* UniBarUITests */,
 				635B2F3E21038ACC000D07D2 /* Products */,
+				136BE8242CC01C55B00FE2B1 /* Pods */,
+				4850F5602DED22B2C2D6386D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +144,7 @@
 				635B2F4621038ACE000D07D2 /* Main.storyboard */,
 				635B2F4921038ACE000D07D2 /* Info.plist */,
 				635B2F4A21038ACE000D07D2 /* UniBar.entitlements */,
+				63D56D4021039B6A0058ED77 /* uniSearchBar.swift */,
 			);
 			path = UniBar;
 			sourceTree = "<group>";
@@ -131,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 635B2F6321038ACE000D07D2 /* Build configuration list for PBXNativeTarget "UniBar" */;
 			buildPhases = (
+				94BF3E8D27B4420CC62D15B4 /* [CP] Check Pods Manifest.lock */,
 				635B2F3921038ACC000D07D2 /* Sources */,
 				635B2F3A21038ACC000D07D2 /* Frameworks */,
 				635B2F3B21038ACC000D07D2 /* Resources */,
+				86CB59B37D9643DED4100568 /* [CP] Embed Pods Frameworks */,
+				81F78B13F75D2646C8DCBF4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 635B2F6621038ACE000D07D2 /* Build configuration list for PBXNativeTarget "UniBarTests" */;
 			buildPhases = (
+				D44ED519578C07EBBAD90FA5 /* [CP] Check Pods Manifest.lock */,
 				635B2F4B21038ACE000D07D2 /* Sources */,
 				635B2F4C21038ACE000D07D2 /* Frameworks */,
 				635B2F4D21038ACE000D07D2 /* Resources */,
+				EF5DE9C621D2D73B2FFF2ED0 /* [CP] Embed Pods Frameworks */,
+				405E65DB6654429D92BA139F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 635B2F6921038ACE000D07D2 /* Build configuration list for PBXNativeTarget "UniBarUITests" */;
 			buildPhases = (
+				59DC2A500FD6E45572C39491 /* [CP] Check Pods Manifest.lock */,
 				635B2F5621038ACE000D07D2 /* Sources */,
 				635B2F5721038ACE000D07D2 /* Frameworks */,
 				635B2F5821038ACE000D07D2 /* Resources */,
+				C0E6EE83E757F6A2512EBC6B /* [CP] Embed Pods Frameworks */,
+				DCB93960B712BD726403E03D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,12 +301,163 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		405E65DB6654429D92BA139F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniBarTests/Pods-UniBarTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59DC2A500FD6E45572C39491 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniBarUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81F78B13F75D2646C8DCBF4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniBar/Pods-UniBar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86CB59B37D9643DED4100568 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UniBar/Pods-UniBar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HotKey/HotKey.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HotKey.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniBar/Pods-UniBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94BF3E8D27B4420CC62D15B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0E6EE83E757F6A2512EBC6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniBarUITests/Pods-UniBarUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D44ED519578C07EBBAD90FA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniBarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCB93960B712BD726403E03D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniBarUITests/Pods-UniBarUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF5DE9C621D2D73B2FFF2ED0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniBarTests/Pods-UniBarTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		635B2F3921038ACC000D07D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				635B2F4321038ACC000D07D2 /* ViewController.swift in Sources */,
+				63D56D4121039B6A0058ED77 /* uniSearchBar.swift in Sources */,
 				635B2F4121038ACC000D07D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,9 +622,11 @@
 		};
 		635B2F6421038ACE000D07D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14CB96086FDE41A03EF2EC8A /* Pods-UniBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UniBar/UniBar.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = W7W7V5B7Q6;
@@ -430,17 +635,21 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.cwsoft.UniBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		635B2F6521038ACE000D07D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38191BD8B94361548E36A8F8 /* Pods-UniBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UniBar/UniBar.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = W7W7V5B7Q6;
@@ -449,14 +658,17 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.cwsoft.UniBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		635B2F6721038ACE000D07D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B037FD73465A64EF16C29B59 /* Pods-UniBarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -478,6 +690,7 @@
 		};
 		635B2F6821038ACE000D07D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FC10BCF8D19DD9C568C2AA8 /* Pods-UniBarTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -499,6 +712,7 @@
 		};
 		635B2F6A21038ACE000D07D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221E1A2F444BAFA58C872DDC /* Pods-UniBarUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -519,6 +733,7 @@
 		};
 		635B2F6B21038ACE000D07D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F5BCE140D26ECD9B4FD4CC3 /* Pods-UniBarUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
