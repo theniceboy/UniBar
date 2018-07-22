@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD7CA7613D1AE9B77775DCDC34F87472"
-               BlueprintName = "HotKey"
+               BlueprintIdentifier = "2699C86A758434E92ACF24DA56E20987"
+               BlueprintName = "Magnet"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "HotKey.framework">
+               BuildableName = "Magnet.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -7,97 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B2B71CC1028363AAE01A3E302515158 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE827E26782B0FDC57B2904F15F6E3EA /* Cocoa.framework */; };
-		376600012D78BBD1A6A1350E2C0E1763 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D932BA03EC0EEBB5D784A0A1A430656 /* Key.swift */; };
-		401C3D04D259233BEAB50F753F44EF54 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26934BD6BC0B65D4E808B922A0F1E543 /* HotKey.swift */; };
-		4F05668B9EB744A2EA80944CD56D6FD9 /* KeyCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07CFD521DA671921D73AA482491B21C /* KeyCombo.swift */; };
+		0D2B41E62A36DEC28DA385F55C1328E6 /* Pods-UniBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 341489F45EE94554424CCC0280BA788A /* Pods-UniBar-dummy.m */; };
+		2B3488DADA7FE9D2765DDCE5675C2E27 /* Magnet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9791D9D6E2352211CB8E10729A7F8996 /* Magnet-dummy.m */; };
+		31A05984E59FE4DAEF3A69C0F3BF152A /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75BC97FBCF5C3763BC5F81D97FBA2FC /* HotKey.swift */; };
+		443057D8BD82965BAF193DA41D88864F /* KeyTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C0D2E591E645CCE118356F701A382 /* KeyTransformer.swift */; };
 		586C46A2D461D9836E8744DC9C70C1C9 /* Pods-UniBarTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CFD4D6EA018F5747F70292541FB8F1 /* Pods-UniBarTests-dummy.m */; };
 		5CC4797C7C9BBFC2193E7C18F5258EA5 /* Pods-UniBarUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D923AF0A9C366A3A00A029AA351E0D3 /* Pods-UniBarUITests-dummy.m */; };
-		5FDD26A50E274A822DB8D0E12F973D3E /* HotKey-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C01D25522738A76DEB854B8415D474 /* HotKey-dummy.m */; };
-		6990681E12FFAC5516C0595A1000455A /* Pods-UniBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 341489F45EE94554424CCC0280BA788A /* Pods-UniBar-dummy.m */; };
-		69E09830B8D8B8585E302655B97C291C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE827E26782B0FDC57B2904F15F6E3EA /* Cocoa.framework */; };
-		6D975842CC8CE90F95881B5A26C1681D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE827E26782B0FDC57B2904F15F6E3EA /* Cocoa.framework */; };
-		7FCAAD15085DF0EDF68458CB37C62FD1 /* Pods-UniBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 992E6C94C2ED5ECDD6FC3E03ABC142A7 /* Pods-UniBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69E09830B8D8B8585E302655B97C291C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */; };
+		6D975842CC8CE90F95881B5A26C1681D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */; };
+		7C01DA7EBBE086A6AFDA64D6E0AD3B44 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */; };
 		890B4882E0B84E75ADC37DA95B97F017 /* Pods-UniBarTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35ABBF4D75A7367A9F12E4C9D8F8E2A6 /* Pods-UniBarTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BA30AF5ACB62F30CE5B6E96AE7DF212 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE827E26782B0FDC57B2904F15F6E3EA /* Cocoa.framework */; };
-		8FAD82218C6A3B9DD0E246693C7D55C3 /* Appkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6AB35A0CC7D0EC7FAC38086EA585D1E /* Appkit.framework */; };
-		B401867272D84298ED1281CD038DACD2 /* HotKeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAC9DABE04E0493AC7084B80B4FFEF /* HotKeysController.swift */; };
+		8A2BC7593757C54CF3AF5971F4A7BA22 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */; };
+		9DF168DEB6E30635DB397AB37B7567D4 /* Pods-UniBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 992E6C94C2ED5ECDD6FC3E03ABC142A7 /* Pods-UniBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5FB61E5B001E9179BCC665DE79FC04 /* KeyCodeTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7475E23FBA16CC47B0E9E4A528EF4F /* KeyCodeTransformer.swift */; };
+		BE57E29CA9D342BA34210167530156C5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0A27F7D816EF3C2A8A037C0AE9F6CE /* Carbon.framework */; };
+		BE81DF3B8B18BB95D273AB497DCD7259 /* TaskQueue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E926F17EFF3B0DAB2C7E1979BBC63CEA /* TaskQueue-dummy.m */; };
+		C5114498F809716408D49B79C74BF57E /* KeyCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2201DAB4FCE3B0A5CAD26D65B6431F2 /* KeyCombo.swift */; };
 		CCD20B6D89048D41F19C5661530B1D82 /* Pods-UniBarUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 104733A8B1672B6F9DB8A87E1E384FF1 /* Pods-UniBarUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0E5B9A249DABC6DC93A498FC5FB12B3 /* NSEventModifierFlags+HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDBFC39A102F89D13F7659FEB469FDD /* NSEventModifierFlags+HotKey.swift */; };
-		E7E905CEE708C219A30A8B214D467482 /* HotKey-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F025444AAF44C9486E85600CAA5DAA37 /* HotKey-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E82EB02A66412AAF35F05B5AC49458CE /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA4FF7011117549B1002928323C971C /* Carbon.framework */; };
+		D42AAC214236C6B46CA0413DD114B4EF /* HotKeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17924E6364198C54CEF280E81D74487D /* HotKeyCenter.swift */; };
+		D5147A209BD06AF0827D70B6C4BCC332 /* Magnet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7AAD73DF93E409CFA16C8E8DAFA092 /* Magnet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAB3AE40ECB5E36DD0415A553389A81E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */; };
+		EAF3EF2466031108D06689B7C2BBFB55 /* TaskQueue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ABC1477442B4B24AD0637976D3A85C8 /* TaskQueue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7317FEEC49534ECF55FDB9B254AE831 /* TaskQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AF189D71C80F104FCAA15917E2382 /* TaskQueue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F851C77884C14FC0473DC8883EFBF750 /* PBXContainerItemProxy */ = {
+		7ADBF21EF02EAD68EB109F11CFA78A50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CD7CA7613D1AE9B77775DCDC34F87472;
-			remoteInfo = HotKey;
+			remoteGlobalIDString = 2699C86A758434E92ACF24DA56E20987;
+			remoteInfo = Magnet;
+		};
+		AD720EC0522AA0408564A9E2E0460544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4BAE91AB15C67E2D2D76884C6CB6868;
+			remoteInfo = TaskQueue;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F7475E23FBA16CC47B0E9E4A528EF4F /* KeyCodeTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyCodeTransformer.swift; path = Lib/Magnet/KeyCodeTransformer.swift; sourceTree = "<group>"; };
 		104733A8B1672B6F9DB8A87E1E384FF1 /* Pods-UniBarUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UniBarUITests-umbrella.h"; sourceTree = "<group>"; };
-		18F35CF272BC05B2F762974DDB2D9B8E /* HotKey.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HotKey.modulemap; sourceTree = "<group>"; };
+		15C053753D2B11FA4FA9398F89E6A750 /* Magnet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Magnet-prefix.pch"; sourceTree = "<group>"; };
+		17924E6364198C54CEF280E81D74487D /* HotKeyCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HotKeyCenter.swift; path = Lib/Magnet/HotKeyCenter.swift; sourceTree = "<group>"; };
+		1B9B04E705B0CEC4B312417DF5440BE4 /* TaskQueue.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TaskQueue.modulemap; sourceTree = "<group>"; };
 		1D923AF0A9C366A3A00A029AA351E0D3 /* Pods-UniBarUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UniBarUITests-dummy.m"; sourceTree = "<group>"; };
-		1EDCF823E9A7BAC6D71DEB6CE9CBAD71 /* HotKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HotKey.framework; path = HotKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B89772129CCA0CEB2FC4A941787862 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26934BD6BC0B65D4E808B922A0F1E543 /* HotKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HotKey.swift; path = Sources/HotKey/HotKey.swift; sourceTree = "<group>"; };
+		275FD2839C065F1EB1C6E9033E66EA49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE8883E043DD3DF7461066646F3AA10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B6EF3483B953FB473022CA2CD6795F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C220DB9572E8F3A1A23250B698D7A90 /* Pods_UniBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UniBar.framework; path = "Pods-UniBar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D932BA03EC0EEBB5D784A0A1A430656 /* Key.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Key.swift; path = Sources/HotKey/Key.swift; sourceTree = "<group>"; };
+		2C264C7E9E68B0F6B1B570266B083302 /* TaskQueue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TaskQueue.xcconfig; sourceTree = "<group>"; };
 		341489F45EE94554424CCC0280BA788A /* Pods-UniBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UniBar-dummy.m"; sourceTree = "<group>"; };
-		34B7502DC6D9236BE79022EE9EFD0789 /* HotKey.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HotKey.xcconfig; sourceTree = "<group>"; };
 		35ABBF4D75A7367A9F12E4C9D8F8E2A6 /* Pods-UniBarTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UniBarTests-umbrella.h"; sourceTree = "<group>"; };
-		3CB9C994131CEEAB2926E60C12D8B6AD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39C4871FE2D3BC95290124EDC4EB0034 /* Pods_UniBarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UniBarTests.framework; path = "Pods-UniBarTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0A27F7D816EF3C2A8A037C0AE9F6CE /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
+		3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		491B8F99AB272AE94AAED763B7B99CC0 /* Pods_UniBarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UniBarUITests.framework; path = "Pods-UniBarUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1917FFF34FEA3E1867428A252C37ED /* Pods-UniBarUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniBarUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4CD331D2A3A37E092E874EE280508EC7 /* Pods-UniBar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UniBar-acknowledgements.markdown"; sourceTree = "<group>"; };
+		554AC5D45BF29A3B077FCC9A9A75776A /* TaskQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TaskQueue.framework; path = TaskQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5838B3FD8367612C09ADA092A8F1EE00 /* Pods-UniBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniBar.debug.xcconfig"; sourceTree = "<group>"; };
-		59C01D25522738A76DEB854B8415D474 /* HotKey-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HotKey-dummy.m"; sourceTree = "<group>"; };
+		5ABC1477442B4B24AD0637976D3A85C8 /* TaskQueue-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaskQueue-umbrella.h"; sourceTree = "<group>"; };
 		5DB6D8A17C293207DF99F6B498C86F65 /* Pods-UniBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UniBar.modulemap"; sourceTree = "<group>"; };
 		6148D92ACFF75AF33371E757C3955A0F /* Pods-UniBarUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UniBarUITests-frameworks.sh"; sourceTree = "<group>"; };
 		61CFD4D6EA018F5747F70292541FB8F1 /* Pods-UniBarTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UniBarTests-dummy.m"; sourceTree = "<group>"; };
 		63A3B605AC1E9827DEDB9FCE600DA1AD /* Pods-UniBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniBarTests.release.xcconfig"; sourceTree = "<group>"; };
-		6E79752ECA1EE5D51D30D917C2C89BBB /* Pods_UniBarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UniBarTests.framework; path = "Pods-UniBarTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77ECAA6F85521D0CFE4A55C64BED8E54 /* Pods-UniBarTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UniBarTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		78CAC9DABE04E0493AC7084B80B4FFEF /* HotKeysController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HotKeysController.swift; path = Sources/HotKey/HotKeysController.swift; sourceTree = "<group>"; };
-		8B4E3E7A900C150AE0C4747C32CC894C /* Pods_UniBarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UniBarUITests.framework; path = "Pods-UniBarUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79BA0F9E2C6F5AA87E34900481AD40F2 /* Pods_UniBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UniBar.framework; path = "Pods-UniBar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9791D9D6E2352211CB8E10729A7F8996 /* Magnet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Magnet-dummy.m"; sourceTree = "<group>"; };
 		992E6C94C2ED5ECDD6FC3E03ABC142A7 /* Pods-UniBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UniBar-umbrella.h"; sourceTree = "<group>"; };
+		9F7AAD73DF93E409CFA16C8E8DAFA092 /* Magnet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Magnet-umbrella.h"; sourceTree = "<group>"; };
 		A5654B1461C86ECD7A1585BB4CF2CB39 /* Pods-UniBar-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UniBar-frameworks.sh"; sourceTree = "<group>"; };
-		A6AB35A0CC7D0EC7FAC38086EA585D1E /* Appkit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Appkit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Appkit.framework; sourceTree = DEVELOPER_DIR; };
-		ABF74A7E6F917D1AEA551BDA094E7531 /* HotKey-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HotKey-prefix.pch"; sourceTree = "<group>"; };
+		A75BC97FBCF5C3763BC5F81D97FBA2FC /* HotKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HotKey.swift; path = Lib/Magnet/HotKey.swift; sourceTree = "<group>"; };
 		AC6E79FF8B0406C34C704B0AF5D4F15C /* Pods-UniBar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniBar-acknowledgements.plist"; sourceTree = "<group>"; };
 		AC991B83891E1A5EFD1474DC047857DE /* Pods-UniBarTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UniBarTests.modulemap"; sourceTree = "<group>"; };
-		ACA4FF7011117549B1002928323C971C /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
-		AFDBFC39A102F89D13F7659FEB469FDD /* NSEventModifierFlags+HotKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSEventModifierFlags+HotKey.swift"; path = "Sources/HotKey/NSEventModifierFlags+HotKey.swift"; sourceTree = "<group>"; };
+		B0E13C27E28A688C6575FF85C2E791B4 /* Magnet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Magnet.modulemap; sourceTree = "<group>"; };
 		B1B22DA352095DF55C4702D6226E5C41 /* Pods-UniBar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UniBar-resources.sh"; sourceTree = "<group>"; };
 		B6C2C4A7643A8425E45374C2020F6E01 /* Pods-UniBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniBar.release.xcconfig"; sourceTree = "<group>"; };
 		BB109F88D30B701D7343BEBCF61619E8 /* Pods-UniBarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniBarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BDD3B935539C70848FE0A364167F1F55 /* Pods-UniBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniBarTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C07CFD521DA671921D73AA482491B21C /* KeyCombo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyCombo.swift; path = Sources/HotKey/KeyCombo.swift; sourceTree = "<group>"; };
 		C382D3DD62F12BB8E36EFCB0CE320806 /* Pods-UniBarTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UniBarTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C3E05C3D76BB7C4C4CEB104C6A7401E9 /* Pods-UniBarTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UniBarTests-frameworks.sh"; sourceTree = "<group>"; };
+		C9542D5F43E39A7EF86348683CF0D38F /* TaskQueue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaskQueue-prefix.pch"; sourceTree = "<group>"; };
 		CA7006835BF743925A535B6023916598 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE827E26782B0FDC57B2904F15F6E3EA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		CF68E81DA9A4D663512F7105AA36D84D /* Pods-UniBarTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UniBarTests-resources.sh"; sourceTree = "<group>"; };
+		D2201DAB4FCE3B0A5CAD26D65B6431F2 /* KeyCombo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyCombo.swift; path = Lib/Magnet/KeyCombo.swift; sourceTree = "<group>"; };
+		DCDF6D439923933A04ECE2067F70B56B /* Magnet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Magnet.xcconfig; sourceTree = "<group>"; };
 		E3B1191EF619EF97B5A7EF10E5D1B726 /* Pods-UniBarUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UniBarUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E3EB7D67C918F104A7436CC970C44E3A /* Pods-UniBarUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UniBarUITests.modulemap"; sourceTree = "<group>"; };
-		F025444AAF44C9486E85600CAA5DAA37 /* HotKey-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HotKey-umbrella.h"; sourceTree = "<group>"; };
+		E70AF189D71C80F104FCAA15917E2382 /* TaskQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskQueue.swift; path = Sources/TaskQueue.swift; sourceTree = "<group>"; };
+		E926F17EFF3B0DAB2C7E1979BBC63CEA /* TaskQueue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TaskQueue-dummy.m"; sourceTree = "<group>"; };
+		EA5C0D2E591E645CCE118356F701A382 /* KeyTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyTransformer.swift; path = Lib/Magnet/KeyTransformer.swift; sourceTree = "<group>"; };
 		F880F35272969B7FB53E0F0B3C6EE866 /* Pods-UniBarUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UniBarUITests-resources.sh"; sourceTree = "<group>"; };
 		F88AB82B95B60ACAD329584A2211DE21 /* Pods-UniBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UniBarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FC03ED64FCCE290C5A43C4708E162311 /* Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Magnet.framework; path = Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		05E6B8CBBA62A425D93EAE9CC9C79F2C /* Frameworks */ = {
+		1F1134F7CBEECF2A0A6B67590C5C0A75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FAD82218C6A3B9DD0E246693C7D55C3 /* Appkit.framework in Frameworks */,
-				E82EB02A66412AAF35F05B5AC49458CE /* Carbon.framework in Frameworks */,
-				8BA30AF5ACB62F30CE5B6E96AE7DF212 /* Cocoa.framework in Frameworks */,
+				BE57E29CA9D342BA34210167530156C5 /* Carbon.framework in Frameworks */,
+				7C01DA7EBBE086A6AFDA64D6E0AD3B44 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +125,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		405B424387750213E05E504053039FB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB3AE40ECB5E36DD0415A553389A81E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E12A056F689911895B354117927002E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -117,29 +141,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F20FF108F2E4E1E7EA2D1B54792C2515 /* Frameworks */ = {
+		FB7D029AA00922B1192E0B6265D24591 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B2B71CC1028363AAE01A3E302515158 /* Cocoa.framework in Frameworks */,
+				8A2BC7593757C54CF3AF5971F4A7BA22 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E116347C58A0922E9CADD61E595BF01 /* HotKey */ = {
+		2E9AE8CCFF0B7E8231E5369BAB69892E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				26934BD6BC0B65D4E808B922A0F1E543 /* HotKey.swift */,
-				78CAC9DABE04E0493AC7084B80B4FFEF /* HotKeysController.swift */,
-				2D932BA03EC0EEBB5D784A0A1A430656 /* Key.swift */,
-				C07CFD521DA671921D73AA482491B21C /* KeyCombo.swift */,
-				AFDBFC39A102F89D13F7659FEB469FDD /* NSEventModifierFlags+HotKey.swift */,
-				DA311EE4F975697BF127D86FDBFF5EA1 /* Support Files */,
+				275FD2839C065F1EB1C6E9033E66EA49 /* Info.plist */,
+				B0E13C27E28A688C6575FF85C2E791B4 /* Magnet.modulemap */,
+				DCDF6D439923933A04ECE2067F70B56B /* Magnet.xcconfig */,
+				9791D9D6E2352211CB8E10729A7F8996 /* Magnet-dummy.m */,
+				15C053753D2B11FA4FA9398F89E6A750 /* Magnet-prefix.pch */,
+				9F7AAD73DF93E409CFA16C8E8DAFA092 /* Magnet-umbrella.h */,
 			);
-			name = HotKey;
-			path = HotKey;
+			name = "Support Files";
+			path = "../Target Support Files/Magnet";
 			sourceTree = "<group>";
 		};
 		33F77A28631C503D639B20A9CC9BD79D /* Pods-UniBarUITests */ = {
@@ -196,6 +220,32 @@
 			path = "Target Support Files/Pods-UniBar";
 			sourceTree = "<group>";
 		};
+		5B75B78D9FE880586EC24179AED1BCCF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AE8883E043DD3DF7461066646F3AA10 /* Info.plist */,
+				1B9B04E705B0CEC4B312417DF5440BE4 /* TaskQueue.modulemap */,
+				2C264C7E9E68B0F6B1B570266B083302 /* TaskQueue.xcconfig */,
+				E926F17EFF3B0DAB2C7E1979BBC63CEA /* TaskQueue-dummy.m */,
+				C9542D5F43E39A7EF86348683CF0D38F /* TaskQueue-prefix.pch */,
+				5ABC1477442B4B24AD0637976D3A85C8 /* TaskQueue-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TaskQueue";
+			sourceTree = "<group>";
+		};
+		65C172EEB20443FA2B127F3AFAAC2DC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC03ED64FCCE290C5A43C4708E162311 /* Magnet.framework */,
+				79BA0F9E2C6F5AA87E34900481AD40F2 /* Pods_UniBar.framework */,
+				39C4871FE2D3BC95290124EDC4EB0034 /* Pods_UniBarTests.framework */,
+				491B8F99AB272AE94AAED763B7B99CC0 /* Pods_UniBarUITests.framework */,
+				554AC5D45BF29A3B077FCC9A9A75776A /* TaskQueue.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6A83164CB98C3F408DAC76DCAC00AE08 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,76 +256,83 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		6B88CF2B1E456AB19B7EF225155F0A6A /* Magnet */ = {
+			isa = PBXGroup;
+			children = (
+				A75BC97FBCF5C3763BC5F81D97FBA2FC /* HotKey.swift */,
+				17924E6364198C54CEF280E81D74487D /* HotKeyCenter.swift */,
+				0F7475E23FBA16CC47B0E9E4A528EF4F /* KeyCodeTransformer.swift */,
+				D2201DAB4FCE3B0A5CAD26D65B6431F2 /* KeyCombo.swift */,
+				EA5C0D2E591E645CCE118356F701A382 /* KeyTransformer.swift */,
+				2E9AE8CCFF0B7E8231E5369BAB69892E /* Support Files */,
+			);
+			name = Magnet;
+			path = Magnet;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				96D996393384F21972E2DD81788EE22C /* Frameworks */,
-				95F84480F812638CE6FA53D39E7937B9 /* Pods */,
-				95BCB04C8F6AA90196C19CBC78660991 /* Products */,
+				D648CE86F139C7CCFD55D5B8A03BE74B /* Frameworks */,
+				8524ACC1825A86A442B8608F1450F053 /* Pods */,
+				65C172EEB20443FA2B127F3AFAAC2DC6 /* Products */,
 				6A83164CB98C3F408DAC76DCAC00AE08 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		95BCB04C8F6AA90196C19CBC78660991 /* Products */ = {
+		8524ACC1825A86A442B8608F1450F053 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1EDCF823E9A7BAC6D71DEB6CE9CBAD71 /* HotKey.framework */,
-				2C220DB9572E8F3A1A23250B698D7A90 /* Pods_UniBar.framework */,
-				6E79752ECA1EE5D51D30D917C2C89BBB /* Pods_UniBarTests.framework */,
-				8B4E3E7A900C150AE0C4747C32CC894C /* Pods_UniBarUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		95F84480F812638CE6FA53D39E7937B9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0E116347C58A0922E9CADD61E595BF01 /* HotKey */,
+				6B88CF2B1E456AB19B7EF225155F0A6A /* Magnet */,
+				E43F4372249D0093ADAE6189236341AF /* TaskQueue */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		96D996393384F21972E2DD81788EE22C /* Frameworks */ = {
+		D648CE86F139C7CCFD55D5B8A03BE74B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B26A861583AAEC07701CA5E836B21759 /* OS X */,
+				E54C390691D9464DCF0A5D1FF793B4A9 /* OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B26A861583AAEC07701CA5E836B21759 /* OS X */ = {
+		E43F4372249D0093ADAE6189236341AF /* TaskQueue */ = {
 			isa = PBXGroup;
 			children = (
-				A6AB35A0CC7D0EC7FAC38086EA585D1E /* Appkit.framework */,
-				ACA4FF7011117549B1002928323C971C /* Carbon.framework */,
-				CE827E26782B0FDC57B2904F15F6E3EA /* Cocoa.framework */,
+				E70AF189D71C80F104FCAA15917E2382 /* TaskQueue.swift */,
+				5B75B78D9FE880586EC24179AED1BCCF /* Support Files */,
 			);
-			name = "OS X";
+			name = TaskQueue;
+			path = TaskQueue;
 			sourceTree = "<group>";
 		};
-		DA311EE4F975697BF127D86FDBFF5EA1 /* Support Files */ = {
+		E54C390691D9464DCF0A5D1FF793B4A9 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
-				18F35CF272BC05B2F762974DDB2D9B8E /* HotKey.modulemap */,
-				34B7502DC6D9236BE79022EE9EFD0789 /* HotKey.xcconfig */,
-				59C01D25522738A76DEB854B8415D474 /* HotKey-dummy.m */,
-				ABF74A7E6F917D1AEA551BDA094E7531 /* HotKey-prefix.pch */,
-				F025444AAF44C9486E85600CAA5DAA37 /* HotKey-umbrella.h */,
-				3CB9C994131CEEAB2926E60C12D8B6AD /* Info.plist */,
+				3B0A27F7D816EF3C2A8A037C0AE9F6CE /* Carbon.framework */,
+				3D39892B712BA302C323D7387AD35584 /* Cocoa.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/HotKey";
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		393C496582B0521E725CF9F6D0C3066C /* Headers */ = {
+		35EAF8177169F6207A0CC81A6D3F85DA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FCAAD15085DF0EDF68458CB37C62FD1 /* Pods-UniBar-umbrella.h in Headers */,
+				D5147A209BD06AF0827D70B6C4BCC332 /* Magnet-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		995A6B9410B443E0972654FF71C44E26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF168DEB6E30635DB397AB37B7567D4 /* Pods-UniBar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +344,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1EC42C7C9D509EDDAEA9E9F3EB60EE0 /* Headers */ = {
+		C5469C8E81D602008AA61D1D905250BE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7E905CEE708C219A30A8B214D467482 /* HotKey-umbrella.h in Headers */,
+				EAF3EF2466031108D06689B7C2BBFB55 /* TaskQueue-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,22 +363,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		34FE25EC855594F9567C0371DAC869BC /* Pods-UniBar */ = {
+		208CEDDEFBE3F44F0CBA243B24763EF9 /* Pods-UniBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8FB4AFC633F1B09A82F6C571B960BD4 /* Build configuration list for PBXNativeTarget "Pods-UniBar" */;
+			buildConfigurationList = 3AF376B8409312FD0AB51F749C1270C3 /* Build configuration list for PBXNativeTarget "Pods-UniBar" */;
 			buildPhases = (
-				70E28D5B0F14D33A0890BC63D7876DE5 /* Sources */,
-				F20FF108F2E4E1E7EA2D1B54792C2515 /* Frameworks */,
-				393C496582B0521E725CF9F6D0C3066C /* Headers */,
+				A5ABE1BB41FB95E38C39B4EA9D43D3F3 /* Sources */,
+				405B424387750213E05E504053039FB3 /* Frameworks */,
+				995A6B9410B443E0972654FF71C44E26 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C6AE2C4A2E78FE2D91B6EDFBC01433BC /* PBXTargetDependency */,
+				D43DEB10672D2925D63252B9422F0189 /* PBXTargetDependency */,
+				977627BA3D3BE0BB0D4E1D10A424C561 /* PBXTargetDependency */,
 			);
 			name = "Pods-UniBar";
 			productName = "Pods-UniBar";
-			productReference = 2C220DB9572E8F3A1A23250B698D7A90 /* Pods_UniBar.framework */;
+			productReference = 79BA0F9E2C6F5AA87E34900481AD40F2 /* Pods_UniBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2699C86A758434E92ACF24DA56E20987 /* Magnet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57E386ED65615ED7FE9FEE901D3AEA48 /* Build configuration list for PBXNativeTarget "Magnet" */;
+			buildPhases = (
+				94B999BAC2F125AFA26E0C094838A30E /* Sources */,
+				1F1134F7CBEECF2A0A6B67590C5C0A75 /* Frameworks */,
+				35EAF8177169F6207A0CC81A6D3F85DA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Magnet;
+			productName = Magnet;
+			productReference = FC03ED64FCCE290C5A43C4708E162311 /* Magnet.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6258889B785D4EADF3066AEB65E0B563 /* Pods-UniBarTests */ = {
@@ -338,7 +413,7 @@
 			);
 			name = "Pods-UniBarTests";
 			productName = "Pods-UniBarTests";
-			productReference = 6E79752ECA1EE5D51D30D917C2C89BBB /* Pods_UniBarTests.framework */;
+			productReference = 39C4871FE2D3BC95290124EDC4EB0034 /* Pods_UniBarTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AE6727D9F51D7A6CA68386C0C5B3F309 /* Pods-UniBarUITests */ = {
@@ -355,24 +430,24 @@
 			);
 			name = "Pods-UniBarUITests";
 			productName = "Pods-UniBarUITests";
-			productReference = 8B4E3E7A900C150AE0C4747C32CC894C /* Pods_UniBarUITests.framework */;
+			productReference = 491B8F99AB272AE94AAED763B7B99CC0 /* Pods_UniBarUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CD7CA7613D1AE9B77775DCDC34F87472 /* HotKey */ = {
+		C4BAE91AB15C67E2D2D76884C6CB6868 /* TaskQueue */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FECC63E52DE59DDEE1BA272EF4E9A90 /* Build configuration list for PBXNativeTarget "HotKey" */;
+			buildConfigurationList = 194730308FE622B7CA8BC649FEA55D76 /* Build configuration list for PBXNativeTarget "TaskQueue" */;
 			buildPhases = (
-				EB958C78E9B03E0B2473CF46708413BF /* Sources */,
-				05E6B8CBBA62A425D93EAE9CC9C79F2C /* Frameworks */,
-				E1EC42C7C9D509EDDAEA9E9F3EB60EE0 /* Headers */,
+				77DAC1FE8E7688CC03A0AE67FEB97267 /* Sources */,
+				FB7D029AA00922B1192E0B6265D24591 /* Frameworks */,
+				C5469C8E81D602008AA61D1D905250BE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HotKey;
-			productName = HotKey;
-			productReference = 1EDCF823E9A7BAC6D71DEB6CE9CBAD71 /* HotKey.framework */;
+			name = TaskQueue;
+			productName = TaskQueue;
+			productReference = 554AC5D45BF29A3B077FCC9A9A75776A /* TaskQueue.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -392,24 +467,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 95BCB04C8F6AA90196C19CBC78660991 /* Products */;
+			productRefGroup = 65C172EEB20443FA2B127F3AFAAC2DC6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD7CA7613D1AE9B77775DCDC34F87472 /* HotKey */,
-				34FE25EC855594F9567C0371DAC869BC /* Pods-UniBar */,
+				2699C86A758434E92ACF24DA56E20987 /* Magnet */,
+				208CEDDEFBE3F44F0CBA243B24763EF9 /* Pods-UniBar */,
 				6258889B785D4EADF3066AEB65E0B563 /* Pods-UniBarTests */,
 				AE6727D9F51D7A6CA68386C0C5B3F309 /* Pods-UniBarUITests */,
+				C4BAE91AB15C67E2D2D76884C6CB6868 /* TaskQueue */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		70E28D5B0F14D33A0890BC63D7876DE5 /* Sources */ = {
+		77DAC1FE8E7688CC03A0AE67FEB97267 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6990681E12FFAC5516C0595A1000455A /* Pods-UniBar-dummy.m in Sources */,
+				BE81DF3B8B18BB95D273AB497DCD7259 /* TaskQueue-dummy.m in Sources */,
+				F7317FEEC49534ECF55FDB9B254AE831 /* TaskQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +498,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94B999BAC2F125AFA26E0C094838A30E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31A05984E59FE4DAEF3A69C0F3BF152A /* HotKey.swift in Sources */,
+				D42AAC214236C6B46CA0413DD114B4EF /* HotKeyCenter.swift in Sources */,
+				AA5FB61E5B001E9179BCC665DE79FC04 /* KeyCodeTransformer.swift in Sources */,
+				C5114498F809716408D49B79C74BF57E /* KeyCombo.swift in Sources */,
+				443057D8BD82965BAF193DA41D88864F /* KeyTransformer.swift in Sources */,
+				2B3488DADA7FE9D2765DDCE5675C2E27 /* Magnet-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5ABE1BB41FB95E38C39B4EA9D43D3F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D2B41E62A36DEC28DA385F55C1328E6 /* Pods-UniBar-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E32BA0D869E99C86E8CD27BE75360D74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,27 +527,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB958C78E9B03E0B2473CF46708413BF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5FDD26A50E274A822DB8D0E12F973D3E /* HotKey-dummy.m in Sources */,
-				401C3D04D259233BEAB50F753F44EF54 /* HotKey.swift in Sources */,
-				B401867272D84298ED1281CD038DACD2 /* HotKeysController.swift in Sources */,
-				376600012D78BBD1A6A1350E2C0E1763 /* Key.swift in Sources */,
-				4F05668B9EB744A2EA80944CD56D6FD9 /* KeyCombo.swift in Sources */,
-				E0E5B9A249DABC6DC93A498FC5FB12B3 /* NSEventModifierFlags+HotKey.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C6AE2C4A2E78FE2D91B6EDFBC01433BC /* PBXTargetDependency */ = {
+		977627BA3D3BE0BB0D4E1D10A424C561 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = HotKey;
-			target = CD7CA7613D1AE9B77775DCDC34F87472 /* HotKey */;
-			targetProxy = F851C77884C14FC0473DC8883EFBF750 /* PBXContainerItemProxy */;
+			name = TaskQueue;
+			target = C4BAE91AB15C67E2D2D76884C6CB6868 /* TaskQueue */;
+			targetProxy = AD720EC0522AA0408564A9E2E0460544 /* PBXContainerItemProxy */;
+		};
+		D43DEB10672D2925D63252B9422F0189 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Magnet;
+			target = 2699C86A758434E92ACF24DA56E20987 /* Magnet */;
+			targetProxy = 7ADBF21EF02EAD68EB109F11CFA78A50 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -522,7 +613,7 @@
 			};
 			name = Debug;
 		};
-		7508DDA7F8C43366A38BADD61F23972D /* Release */ = {
+		35ACFD6FEBCA36C77FBB2A402C8022C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6C2C4A7643A8425E45374C2020F6E01 /* Pods-UniBar.release.xcconfig */;
 			buildSettings = {
@@ -552,6 +643,71 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3F10863D5CBF16DC4BC93FE20F73498E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C264C7E9E68B0F6B1B570266B083302 /* TaskQueue.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/TaskQueue/TaskQueue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TaskQueue/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/TaskQueue/TaskQueue.modulemap";
+				PRODUCT_NAME = TaskQueue;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5F812DB67ECE5F5CB97A9397F7D13493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCDF6D439923933A04ECE2067F70B56B /* Magnet.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Magnet/Magnet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Magnet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/Magnet/Magnet.modulemap";
+				PRODUCT_NAME = Magnet;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -614,38 +770,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		83BFC008C1F24E842EE121E436183018 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34B7502DC6D9236BE79022EE9EFD0789 /* HotKey.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/HotKey/HotKey-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HotKey/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/HotKey/HotKey.modulemap";
-				PRODUCT_NAME = HotKey;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		84A4433861958444B0D2F0BAB7D444DA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -744,7 +868,39 @@
 			};
 			name = Debug;
 		};
-		B7A5B1E46348470E436C875E0ABD0AE6 /* Debug */ = {
+		975BF627D57986C2C21FC35A582A52D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCDF6D439923933A04ECE2067F70B56B /* Magnet.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Magnet/Magnet-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Magnet/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/Magnet/Magnet.modulemap";
+				PRODUCT_NAME = Magnet;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA5AA30A7DF1EBB6739487ABDBF4560F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5838B3FD8367612C09ADA092A8F1EE00 /* Pods-UniBar.debug.xcconfig */;
 			buildSettings = {
@@ -780,10 +936,11 @@
 			};
 			name = Debug;
 		};
-		DCAA8EC986DE4DA565E07E897DDBF871 /* Release */ = {
+		EA14D9A5A0444F6EB86F0F2C458B568A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34B7502DC6D9236BE79022EE9EFD0789 /* HotKey.xcconfig */;
+			baseConfigurationReference = 2C264C7E9E68B0F6B1B570266B083302 /* TaskQueue.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -795,13 +952,13 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/HotKey/HotKey-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HotKey/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TaskQueue/TaskQueue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TaskQueue/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/HotKey/HotKey.modulemap";
-				PRODUCT_NAME = HotKey;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/TaskQueue/TaskQueue.modulemap";
+				PRODUCT_NAME = TaskQueue;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -849,6 +1006,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		194730308FE622B7CA8BC649FEA55D76 /* Build configuration list for PBXNativeTarget "TaskQueue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F10863D5CBF16DC4BC93FE20F73498E /* Debug */,
+				EA14D9A5A0444F6EB86F0F2C458B568A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -858,11 +1024,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FECC63E52DE59DDEE1BA272EF4E9A90 /* Build configuration list for PBXNativeTarget "HotKey" */ = {
+		3AF376B8409312FD0AB51F749C1270C3 /* Build configuration list for PBXNativeTarget "Pods-UniBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				83BFC008C1F24E842EE121E436183018 /* Debug */,
-				DCAA8EC986DE4DA565E07E897DDBF871 /* Release */,
+				CA5AA30A7DF1EBB6739487ABDBF4560F /* Debug */,
+				35ACFD6FEBCA36C77FBB2A402C8022C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57E386ED65615ED7FE9FEE901D3AEA48 /* Build configuration list for PBXNativeTarget "Magnet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				975BF627D57986C2C21FC35A582A52D2 /* Debug */,
+				5F812DB67ECE5F5CB97A9397F7D13493 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -872,15 +1047,6 @@
 			buildConfigurations = (
 				27C3A6A0BC96D526A604224390ECBB79 /* Debug */,
 				090BFE18C3D9412F437E6FF0740E4AA7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D8FB4AFC633F1B09A82F6C571B960BD4 /* Build configuration list for PBXNativeTarget "Pods-UniBar" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B7A5B1E46348470E436C875E0ABD0AE6 /* Debug */,
-				7508DDA7F8C43366A38BADD61F23972D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

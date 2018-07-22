@@ -678,7 +678,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="UniBar" customModuleProvider="target">
                     <connections>
                         <outlet property="UnibarMain" destination="tc2-ZY-pVW" id="Fen-YD-iaR"/>
-                        <outlet property="tfSearch" destination="ejm-SQ-gXN" id="6Q2-bx-GHf"/>
+                        <outlet property="tfSearch" destination="ejm-SQ-gXN" id="5Sk-RI-QXp"/>
                         <outlet property="uniSearchBar" destination="q99-IA-i3E" id="MmJ-U2-sl1"/>
                         <outlet property="vSearchBar" destination="AOr-PJ-eHP" id="RZA-MB-adO"/>
                     </connections>
@@ -707,9 +707,6 @@
                             </buttonCell>
                         </button>
                     </subviews>
-                    <connections>
-                        <outlet property="tfSearchBar" destination="ejm-SQ-gXN" id="8Kw-8a-YM9"/>
-                    </connections>
                 </customView>
                 <menu id="tc2-ZY-pVW">
                     <items>

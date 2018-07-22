@@ -102,10 +102,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/HotKey/HotKey.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Magnet/Magnet.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TaskQueue/TaskQueue.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/HotKey/HotKey.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Magnet/Magnet.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TaskQueue/TaskQueue.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

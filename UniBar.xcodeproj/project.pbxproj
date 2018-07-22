@@ -13,9 +13,10 @@
 		635B2F4821038ACE000D07D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635B2F4621038ACE000D07D2 /* Main.storyboard */; };
 		635B2F5421038ACE000D07D2 /* UniBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B2F5321038ACE000D07D2 /* UniBarTests.swift */; };
 		635B2F5F21038ACE000D07D2 /* UniBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B2F5E21038ACE000D07D2 /* UniBarUITests.swift */; };
+		63A80B2E210483BE007ACCE7 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A80B2D210483BE007ACCE7 /* Magnet.framework */; };
+		63A80B30210483D4007ACCE7 /* TaskQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A80B2F210483D4007ACCE7 /* TaskQueue.framework */; };
 		63D56D4121039B6A0058ED77 /* uniSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D56D4021039B6A0058ED77 /* uniSearchBar.swift */; };
 		B466BE565E35025C79F8603C /* Pods_UniBarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D6C3615526FAC6969DF067 /* Pods_UniBarTests.framework */; };
-		EA15C9B7BB129BBFD383D091 /* Pods_UniBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53001BAEA1AB6D36A997A60D /* Pods_UniBar.framework */; };
 		F0BB65B1DCEDC0D1866D3B8E /* Pods_UniBarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0109993ECF5753C2C21E1B56 /* Pods_UniBarUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +56,12 @@
 		635B2F5A21038ACE000D07D2 /* UniBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B2F5E21038ACE000D07D2 /* UniBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniBarUITests.swift; sourceTree = "<group>"; };
 		635B2F6021038ACE000D07D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6386DF342103A60D00E22614 /* UniBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniBar-Bridging-Header.h"; sourceTree = "<group>"; };
+		6386DF352104325300E22614 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		63A80B2D210483BE007ACCE7 /* Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63A80B2F210483D4007ACCE7 /* TaskQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TaskQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D56D4021039B6A0058ED77 /* uniSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = uniSearchBar.swift; path = Classes/uniSearchBar.swift; sourceTree = "<group>"; };
+		63FAEAAB210465BD0087FC70 /* Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC10BCF8D19DD9C568C2AA8 /* Pods-UniBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarTests/Pods-UniBarTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F5BCE140D26ECD9B4FD4CC3 /* Pods-UniBarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarUITests/Pods-UniBarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B037FD73465A64EF16C29B59 /* Pods-UniBarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarTests/Pods-UniBarTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA15C9B7BB129BBFD383D091 /* Pods_UniBar.framework in Frameworks */,
+				63A80B30210483D4007ACCE7 /* TaskQueue.framework in Frameworks */,
+				63A80B2E210483BE007ACCE7 /* Magnet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +113,10 @@
 		4850F5602DED22B2C2D6386D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63A80B2F210483D4007ACCE7 /* TaskQueue.framework */,
+				63A80B2D210483BE007ACCE7 /* Magnet.framework */,
+				63FAEAAB210465BD0087FC70 /* Magnet.framework */,
+				6386DF352104325300E22614 /* Carbon.framework */,
 				53001BAEA1AB6D36A997A60D /* Pods_UniBar.framework */,
 				C6D6C3615526FAC6969DF067 /* Pods_UniBarTests.framework */,
 				0109993ECF5753C2C21E1B56 /* Pods_UniBarUITests.framework */,
@@ -145,6 +156,8 @@
 				635B2F4921038ACE000D07D2 /* Info.plist */,
 				635B2F4A21038ACE000D07D2 /* UniBar.entitlements */,
 				63D56D4021039B6A0058ED77 /* uniSearchBar.swift */,
+				6386DF342103A60D00E22614 /* UniBar-Bridging-Header.h */,
+				6386DF372104351800E22614 /* Third-Parties */,
 			);
 			path = UniBar;
 			sourceTree = "<group>";
@@ -165,6 +178,13 @@
 				635B2F6021038ACE000D07D2 /* Info.plist */,
 			);
 			path = UniBarUITests;
+			sourceTree = "<group>";
+		};
+		6386DF372104351800E22614 /* Third-Parties */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Third-Parties";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,11 +377,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UniBar/Pods-UniBar-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/HotKey/HotKey.framework",
+				"${BUILT_PRODUCTS_DIR}/Magnet/Magnet.framework",
+				"${BUILT_PRODUCTS_DIR}/TaskQueue/TaskQueue.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HotKey.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Magnet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TaskQueue.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -639,6 +661,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cc.cwsoft.UniBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UniBar/UniBar-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -662,6 +685,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cc.cwsoft.UniBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UniBar/UniBar-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

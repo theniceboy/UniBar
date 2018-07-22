@@ -1,12 +1,15 @@
 PODS:
-  - HotKey (0.1.0)
+  - Magnet (2.1.0)
+  - TaskQueue (1.1.1)
 
 DEPENDENCIES:
-  - HotKey
+  - Magnet
+  - TaskQueue
 
 SPEC CHECKSUMS:
-  HotKey: aa2b99ed0a4d7026e1bc15b6ae206a70e9a1851f
+  Magnet: 6c26f03a279b9340bb6a86a73a1314d2da110219
+  TaskQueue: 53a3cdaf817d9ce3cd50837ff6610aeb7b968997
 
-PODFILE CHECKSUM: b4bf6a76074e2476f218f11fd0aaa4dff8a40d34
+PODFILE CHECKSUM: f72433494370cad065259331aab530ef783bb809
 
 COCOAPODS: 1.3.1

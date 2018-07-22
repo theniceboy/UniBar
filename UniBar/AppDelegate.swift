@@ -7,7 +7,9 @@
 //
 
 import Cocoa
-import HotKey
+import Carbon
+import Magnet
+import TaskQueue
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldDelegate {
@@ -18,16 +20,48 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
     @IBOutlet weak var tfSearch: NSTextField!
     
     let UnibarIcon = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    let keycode = UInt16(kVK_ANSI_X)
+    let keymask: NSEvent.ModifierFlags = .command
     
+    var menuAppearing: Bool = false
+    
+    // ... to set it up ...
+    
+
+    @objc func openUnibar () {
+        if (menuAppearing) {
+            //return
+        } else {
+            print ("opening")
+            UnibarIcon.popUpMenu(UnibarMain)
+            //menuItemsInit_afterAppearance()
+        }
+    }
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Initialization
         UnibarMain.delegate = self
         
         // Set Hotkey
-        let openHotkey = HotKey(key: .space, modifiers: [.option, .command])
-        openHotkey.keyDownHandler = {
-            print("pressed")
+        print("adding hotkey")
+        /*
+        var myeventref = EventHotKeyRef(bitPattern: 0), myhotkeyid = EventHotKeyID(signature: FourCharCode(exactly: 1)!, id: 1)
+        AEInstallEventHandler(kCoreEventClass, 1, { (event, eventMutable, refCon) -> OSErr in
+            print("Event")
+            return OSErr(exactly: 0)!
+        }, UnsafeMutablePointer(bitPattern: 0), true)
+        RegisterEventHotKey(49, UInt32(optionKey), myhotkeyid, GetApplicationEventTarget(), 0, &myeventref)
+       */
+        if let keyCombo = KeyCombo(keyCode: 49, cocoaModifiers: [.option]) {
+            print("cool")
+            let hotKey = HotKey(identifier: "OptionSpace",
+                                keyCombo: keyCombo,
+                                target: self,
+                                action: #selector(self.openUnibar), actionQueue: HotKey.ActionQueue.main)
+            hotKey.register()
         }
+        
+ 
         
         // Set Icon
         let menuIcon = NSImage(named: "MenuIcon")
@@ -43,12 +77,33 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
     // MARK: - Menu Events
     
     func menuWillOpen(_ menu: NSMenu) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+        print("menuwillopen")
+        /*
+        let queue = TaskQueue()
+        queue.tasks +=! {
+            print("dispatch")
             self.menuItemsInit_afterAppearance()
         }
+        queue.run()
+ */
+        if #available(OSX 10.12, *) {
+            print("t")
+            let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (timer) in
+                print("timer")
+                self.menuItemsInit_afterAppearance()
+            }
+            
+        } else {
+            // Fallback on earlier versions
+        }
+        menuAppearing = true
+    }
+    func menuDidClose(_ menu: NSMenu) {
+        menuAppearing = false
     }
     func menuItemsInit_afterAppearance () {
-        tfSearch.becomeFirstResponder()
+        print("right there")
+        self.tfSearch.becomeFirstResponder()
     }
     
     
