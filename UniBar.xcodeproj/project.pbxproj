@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		633442F521076D12008A7754 /* whiteNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633442F421076D12008A7754 /* whiteNSView.swift */; };
 		633442F7210776B0008A7754 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633442F6210776B0008A7754 /* Colors.swift */; };
 		635B2F4121038ACC000D07D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B2F4021038ACC000D07D2 /* AppDelegate.swift */; };
 		635B2F4321038ACC000D07D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B2F4221038ACC000D07D2 /* ViewController.swift */; };
@@ -19,7 +18,6 @@
 		635F9D1921061ED00059C42A /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F9D1821061ED00059C42A /* Magnet.framework */; };
 		635F9D1B21061ED40059C42A /* TaskQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F9D1A21061ED40059C42A /* TaskQueue.framework */; };
 		63BF6C1821060EC400DEF56A /* frmUniMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BF6C1721060EC400DEF56A /* frmUniMain.swift */; };
-		63D56D4121039B6A0058ED77 /* uniSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D56D4021039B6A0058ED77 /* uniSearchBar.swift */; };
 		B466BE565E35025C79F8603C /* Pods_UniBarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D6C3615526FAC6969DF067 /* Pods_UniBarTests.framework */; };
 		F0BB65B1DCEDC0D1866D3B8E /* Pods_UniBarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0109993ECF5753C2C21E1B56 /* Pods_UniBarUITests.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +45,6 @@
 		221E1A2F444BAFA58C872DDC /* Pods-UniBarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarUITests/Pods-UniBarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38191BD8B94361548E36A8F8 /* Pods-UniBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniBar/Pods-UniBar.release.xcconfig"; sourceTree = "<group>"; };
 		53001BAEA1AB6D36A997A60D /* Pods_UniBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		633442F421076D12008A7754 /* whiteNSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = whiteNSView.swift; path = UniBar/Classes/whiteNSView.swift; sourceTree = SOURCE_ROOT; };
 		633442F6210776B0008A7754 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = UniBar/Classes/Colors.swift; sourceTree = SOURCE_ROOT; };
 		635B2F3D21038ACC000D07D2 /* UniBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B2F4021038ACC000D07D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +71,6 @@
 		63BAE9C921061CB50029E2E7 /* Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BAE9CB21061CB90029E2E7 /* TaskQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TaskQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BF6C1721060EC400DEF56A /* frmUniMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = frmUniMain.swift; path = Forms/frmUniMain.swift; sourceTree = "<group>"; };
-		63D56D4021039B6A0058ED77 /* uniSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = uniSearchBar.swift; path = Classes/uniSearchBar.swift; sourceTree = "<group>"; };
 		63FAEAAB210465BD0087FC70 /* Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FCA1D6210619B6007DDDCD /* FlatButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlatButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC10BCF8D19DD9C568C2AA8 /* Pods-UniBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarTests/Pods-UniBarTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,7 +145,6 @@
 		633442F321076CD2008A7754 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				633442F421076D12008A7754 /* whiteNSView.swift */,
 				633442F6210776B0008A7754 /* Colors.swift */,
 			);
 			name = Classes;
@@ -188,7 +183,6 @@
 				635B2F4621038ACE000D07D2 /* Main.storyboard */,
 				635B2F4921038ACE000D07D2 /* Info.plist */,
 				635B2F4A21038ACE000D07D2 /* UniBar.entitlements */,
-				63D56D4021039B6A0058ED77 /* uniSearchBar.swift */,
 				6386DF342103A60D00E22614 /* UniBar-Bridging-Header.h */,
 				6386DF372104351800E22614 /* Third-Parties */,
 				63BF6C1721060EC400DEF56A /* frmUniMain.swift */,
@@ -517,9 +511,7 @@
 				63BF6C1821060EC400DEF56A /* frmUniMain.swift in Sources */,
 				635F9D1721061E890059C42A /* FlatButton.swift in Sources */,
 				633442F7210776B0008A7754 /* Colors.swift in Sources */,
-				63D56D4121039B6A0058ED77 /* uniSearchBar.swift in Sources */,
 				635B2F4121038ACC000D07D2 /* AppDelegate.swift in Sources */,
-				633442F521076D12008A7754 /* whiteNSView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

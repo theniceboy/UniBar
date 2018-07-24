@@ -10,7 +10,7 @@ import Cocoa
 
 var curShowingStatus: Int = 0
 
-class frmUniMain: NSViewController {
+class frmUniMain: NSViewController, NSTextFieldDelegate {
 
     @IBOutlet weak var tfSearch: NSTextField!
     
@@ -20,9 +20,12 @@ class frmUniMain: NSViewController {
     
     func uiInitialization () {
         self.view.wantsLayer = true
+        v_tfSearch.wantsLayer = true
+        tfSearch.wantsLayer = true
         
         self.view.layer?.backgroundColor = CGColor.white
-        v_tfSearch.layer?.backgroundColor =
+        v_tfSearch.layer?.backgroundColor = colorLightGray1
+        v_tfSearch.layer?.cornerRadius = 4
     }
     
     /*
@@ -47,6 +50,9 @@ class frmUniMain: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Needed setups
+        tfSearch.delegate = self
         
         // Visual customization
         uiInitialization()
@@ -78,6 +84,23 @@ class frmUniMain: NSViewController {
     
     @IBAction func btnQuit_Clicked(_ sender: Any) {
         NSApplication.shared.terminate(self)
+    }
+
+    // MARK: - Textfield handling
+    
+    override func controlTextDidChange(_ obj: Notification) {
+        if #available(OSX 10.12, *) {
+            NSAnimationContext.runAnimationGroup({ (context) in
+                context.duration = 1
+            }) {
+                self.v_tfSearch.layer?.animate(color: (self.tfSearch.stringValue == "" ? colorLightGray1 : colorLightGray2), keyPath: "backgroundColor", duration: 0.15)
+                // why?
+            }
+            
+        } else {
+            // Fallback on earlier versions
+            v_tfSearch.layer?.backgroundColor = (tfSearch.stringValue == "" ? colorLightGray1 : colorLightGray2)
+        }
     }
     
     
