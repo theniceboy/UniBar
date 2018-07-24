@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="gjR-6G-kDp">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14306.4"/>
@@ -678,26 +678,14 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="UniBar" customModuleProvider="target">
                     <connections>
                         <outlet property="UnibarMain" destination="tc2-ZY-pVW" id="Fen-YD-iaR"/>
-                        <outlet property="tfSearch" destination="ejm-SQ-gXN" id="5Sk-RI-QXp"/>
-                        <outlet property="uniSearchBar" destination="q99-IA-i3E" id="MmJ-U2-sl1"/>
-                        <outlet property="vSearchBar" destination="AOr-PJ-eHP" id="RZA-MB-adO"/>
                     </connections>
                 </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customView id="AOr-PJ-eHP">
+                <customView id="AOr-PJ-eHP" customClass="uniSearchBar" customModule="UniBar" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="377" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-SQ-gXN">
-                            <rect key="frame" x="6" y="3" width="206" height="22"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Type to Search" bezelStyle="round" id="alh-XT-poT">
-                                <font key="font" usesAppearanceFont="YES"/>
-                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MRG-45-Gll">
                             <rect key="frame" x="282" y="-1" width="81" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -706,9 +694,18 @@
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
+                        <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-SQ-gXN">
+                            <rect key="frame" x="7" y="6" width="152" height="22"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <textFieldCell key="cell" selectable="YES" editable="YES" borderStyle="border" alignment="left" placeholderString="Type to Search" id="alh-XT-poT">
+                                <font key="font" usesAppearanceFont="YES"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
                     </subviews>
                 </customView>
-                <menu id="tc2-ZY-pVW">
+                <menu id="tc2-ZY-pVW" userLabel="Main">
                     <items>
                         <menuItem title="Search Bar" id="q99-IA-i3E" userLabel="Search Bar">
                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -716,20 +713,156 @@
                         <menuItem isSeparatorItem="YES" id="Nlo-Pa-IXZ"/>
                         <menuItem title="Preferences" id="ewa-EW-w71">
                             <modifierMask key="keyEquivalentModifierMask"/>
-                            <connections>
-                                <action selector="preferences_Clicked:" target="Voe-Tx-rLC" id="umZ-th-YQd"/>
-                            </connections>
                         </menuItem>
                         <menuItem title="Quit UniBar" id="4qv-xt-4oN" userLabel="quit">
                             <modifierMask key="keyEquivalentModifierMask"/>
-                            <connections>
-                                <action selector="quit_Clicked:" target="Voe-Tx-rLC" id="zwl-9w-66i"/>
-                            </connections>
                         </menuItem>
                     </items>
                 </menu>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--menu-->
+        <scene sceneID="TcK-MB-ZxP">
+            <objects>
+                <viewController title="menu" identifier="frmUniMain" storyboardIdentifier="frmUniMain" id="gjR-6G-kDp" customClass="frmUniMain" customModule="UniBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="uHj-MW-iuh">
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="364"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="rHY-V1-JIk">
+                                <rect key="frame" x="0.0" y="0.0" width="425" height="364"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-Ok-GKN" customClass="FlatButton" customModule="UniBar" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="1" width="91" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Settings" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="U7s-Qe-KKm">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                <color key="value" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeButtonColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
+                                                <color key="value" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnSettings_Clicked:" target="gjR-6G-kDp" id="1Hv-Uv-WJz"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yhA-BO-Llf" customClass="FlatButton" customModule="UniBar" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="1" width="109" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Quit Unibar" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="TwM-qT-F5Q">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                <color key="value" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeButtonColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeTextColor">
+                                                <color key="value" red="0.84166309931506844" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnQuit_Clicked:" target="gjR-6G-kDp" id="AEY-K6-Rr3"/>
+                                        </connections>
+                                    </button>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efu-A9-KVB">
+                                        <rect key="frame" x="0.0" y="286" width="425" height="78"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <subviews>
+                                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYr-oi-dYK">
+                                                <rect key="frame" x="49" y="20" width="330" height="22"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <textFieldCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" placeholderString="Type to Search" id="W72-2q-I3j">
+                                                    <font key="font" metaFont="system" size="15"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vLS-rV-maw">
+                                                <rect key="frame" x="213" y="43" width="81" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Swa-7S-0oy">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yhA-BO-Llf" secondAttribute="bottom" constant="8" id="3bx-LV-HX5"/>
+                                    <constraint firstAttribute="bottom" secondItem="TLX-Ok-GKN" secondAttribute="bottom" constant="8" id="Qt2-Dk-lWs"/>
+                                    <constraint firstItem="TLX-Ok-GKN" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" constant="8" id="Wre-nc-DKc"/>
+                                    <constraint firstAttribute="trailing" secondItem="yhA-BO-Llf" secondAttribute="trailing" constant="8" id="nl6-S1-QvP"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rHY-V1-JIk" firstAttribute="leading" secondItem="uHj-MW-iuh" secondAttribute="leading" id="0Vc-TP-q5J"/>
+                            <constraint firstItem="rHY-V1-JIk" firstAttribute="top" secondItem="uHj-MW-iuh" secondAttribute="top" id="TEj-sS-KPS"/>
+                            <constraint firstAttribute="trailing" secondItem="rHY-V1-JIk" secondAttribute="trailing" id="b1W-nr-Fqe"/>
+                            <constraint firstAttribute="bottom" secondItem="rHY-V1-JIk" secondAttribute="bottom" id="x7u-ek-7mr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnQuitUibar" destination="yhA-BO-Llf" id="TM7-vd-4eZ"/>
+                        <outlet property="btnSettings" destination="TLX-Ok-GKN" id="wlE-5M-gSf"/>
+                        <outlet property="tfSearch" destination="bYr-oi-dYK" id="6pd-4D-gjf"/>
+                    </connections>
+                </viewController>
+                <customObject id="2eS-YT-yBA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.5" y="322"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5cv-Ut-2yR">
+            <objects>
+                <viewController id="Ltj-Rt-YpS" sceneMemberID="viewController">
+                    <view key="view" id="rpc-no-oRk">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="aTz-mB-yOG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="574" y="95"/>
         </scene>
     </scenes>
 </document>

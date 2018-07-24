@@ -17,6 +17,9 @@ class uniSearchBar: NSView, NSTextFieldDelegate {
         // Drawing code here.
     }
     
+    @IBAction func btnTapped(_ sender: Any) {
+        printView("tapped")
+    }
     
     
     override func viewDidChangeEffectiveAppearance() {

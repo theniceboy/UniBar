@@ -11,15 +11,20 @@ import Carbon
 import Magnet
 import TaskQueue
 
+var statusbutton: NSStatusBarButton = NSStatusBarButton()
+let UnibarIcon = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldDelegate {
     
     @IBOutlet weak var UnibarMain: NSMenu!
-    @IBOutlet weak var uniSearchBar: NSMenuItem!
-    @IBOutlet weak var vSearchBar: NSView!
-    @IBOutlet weak var tfSearch: NSTextField!
+    //@IBOutlet weak var uniSearchBar: NSMenuItem!
+    //@IBOutlet weak var vSearchBar: NSView!
     
-    let UnibarIcon = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    var popUniMain: NSPopover = NSPopover()
+    //@IBOutlet weak var tfSearch: NSTextField!
+   // @IBOutlet weak var tfSearchCell: NSTextFieldCell!
+    
     let keycode = UInt16(kVK_ANSI_X)
     let keymask: NSEvent.ModifierFlags = .command
     
@@ -27,48 +32,79 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
     
     // ... to set it up ...
     
+    @objc func hotkeyTriggered() {
+        openUnibar(btn: UnibarIcon.button!)
+    }
+    
+    var main: NSWindowController!
+    @objc func openUnibar (btn: NSStatusBarButton) {
+        print ("open!")
+        print(btn.bounds)
+        
+        curShowingStatus = 1
+        main = NSStoryboard(name : "Main", bundle: nil).instantiateController(withIdentifier: "MainWindow") as! NSWindowController
+        let mainVc = NSStoryboard(name:"Main", bundle: nil).instantiateController(withIdentifier: "MainViewController") as! ViewController
+        main.window?.contentViewController = mainVc
+        main.window?.makeKeyAndOrderFront(nil)
+        
+        
+        //popUniMain.show(relativeTo: statusbutton.bounds, of: statusbutton, preferredEdge: NSRectEdge.minY)
+        
 
-    @objc func openUnibar () {
+        /*
+       // tfSearch.layout()
         if (menuAppearing) {
             //return
         } else {
             print ("opening")
+            var queue = TaskQueue()
+            queue.tasks +=! {
+                    print("timer")
+                    self.menuItemsInit_afterAppearance()
+                }
+            
             UnibarIcon.popUpMenu(UnibarMain)
             //menuItemsInit_afterAppearance()
         }
+ */
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
+        
+        
         // Initialization
         UnibarMain.delegate = self
+        //tfSearch.layout()
         
         // Set Hotkey
         print("adding hotkey")
-        /*
-        var myeventref = EventHotKeyRef(bitPattern: 0), myhotkeyid = EventHotKeyID(signature: FourCharCode(exactly: 1)!, id: 1)
-        AEInstallEventHandler(kCoreEventClass, 1, { (event, eventMutable, refCon) -> OSErr in
-            print("Event")
-            return OSErr(exactly: 0)!
-        }, UnsafeMutablePointer(bitPattern: 0), true)
-        RegisterEventHotKey(49, UInt32(optionKey), myhotkeyid, GetApplicationEventTarget(), 0, &myeventref)
-       */
         if let keyCombo = KeyCombo(keyCode: 49, cocoaModifiers: [.option]) {
             print("cool")
             let hotKey = HotKey(identifier: "OptionSpace",
                                 keyCombo: keyCombo,
                                 target: self,
-                                action: #selector(self.openUnibar), actionQueue: HotKey.ActionQueue.main)
+                                action: #selector(self.hotkeyTriggered), actionQueue: HotKey.ActionQueue.main)
             hotKey.register()
         }
         
- 
+        // Initialize UniMain Popover
+        popUniMain.behavior = .transient
+        popUniMain.animates = false
+        popUniMain.appearance = NSAppearance(named: NSAppearance.Name.vibrantDark)
+        popUniMain.contentViewController = frmUniMain.freshController()
         
         // Set Icon
         let menuIcon = NSImage(named: "MenuIcon")
         menuIcon?.isTemplate = true
         UnibarIcon.image = menuIcon
-        UnibarIcon.menu = UnibarMain
-        uniSearchBar.view = vSearchBar
+        //UnibarIcon.menu = UnibarMain
+        UnibarIcon.target = self
+        UnibarIcon.action = #selector(AppDelegate.openUnibar)
+        //uniSearchBar.view = vSearchBar
+        
+        
+        statusbutton = UnibarIcon.button!
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -85,38 +121,27 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
             self.menuItemsInit_afterAppearance()
         }
         queue.run()
- */
-        if #available(OSX 10.12, *) {
-            print("t")
-            let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (timer) in
-                print("timer")
-                self.menuItemsInit_afterAppearance()
-            }
-            
-        } else {
-            // Fallback on earlier versions
-        }
-        menuAppearing = true
+ */        menuAppearing = true
     }
     func menuDidClose(_ menu: NSMenu) {
         menuAppearing = false
     }
     func menuItemsInit_afterAppearance () {
         print("right there")
-        self.tfSearch.becomeFirstResponder()
+        //self.tfSearch.becomeFirstResponder()
     }
     
     
     // MARK: - Menu Items
     
-    
-    @IBAction func preferences_Clicked(_ sender: Any) {
+    @IBAction func tfSearchBecomeFirstResponder(_ sender: Any) {
+        /*
+        tfSearch.becomeFirstResponder()
+        tfSearch.layout()
+        tfSearch.isBordered = !tfSearch.isBordered
+        tfSearch.backgroundColor = NSColor.white
+        //tfSearchCell.firstr*/
     }
-    
-    @IBAction func quit_Clicked(_ sender: Any) {
-        NSApplication.shared.terminate(self)
-    }
-    
 
 
 }
