@@ -13,6 +13,9 @@ import TaskQueue
 
 var statusbutton: NSStatusBarButton = NSStatusBarButton()
 let UnibarIcon = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+var vcUniMain: NSViewController = NSViewController()
+var windowUniMain: NSWindowController = NSWindowController()
+var _previousActivatedApp: NSRunningApplication!
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldDelegate {
@@ -33,45 +36,43 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
     // ... to set it up ...
     
     @objc func hotkeyTriggered() {
-        openUnibar(btn: UnibarIcon.button!)
+        if (curShowingStatus == 0) {
+            openUnibar(btn: UnibarIcon.button!)
+        } else {
+            hideUnibar(resetFocus: true)
+        }
     }
     
-    var main: NSWindowController!
-    @objc func openUnibar (btn: NSStatusBarButton) {
-        print ("open!")
-        print(btn.bounds)
-        
-        curShowingStatus = 1
-        main = NSStoryboard(name : "Main", bundle: nil).instantiateController(withIdentifier: "MainWindow") as! NSWindowController
-        let mainVc = NSStoryboard(name:"Main", bundle: nil).instantiateController(withIdentifier: "MainViewController") as! ViewController
-        main.window?.contentViewController = mainVc
-        main.window?.makeKeyAndOrderFront(nil)
-        
-        
-        //popUniMain.show(relativeTo: statusbutton.bounds, of: statusbutton, preferredEdge: NSRectEdge.minY)
-        
-
-        /*
-       // tfSearch.layout()
-        if (menuAppearing) {
-            //return
-        } else {
-            print ("opening")
-            var queue = TaskQueue()
-            queue.tasks +=! {
-                    print("timer")
-                    self.menuItemsInit_afterAppearance()
-                }
-            
-            UnibarIcon.popUpMenu(UnibarMain)
-            //menuItemsInit_afterAppearance()
+    @objc public func hideUnibar (resetFocus: Bool) {
+        curShowingStatus = 0
+        windowUniMain.window?.close()
+        if (resetFocus) {
+            _previousActivatedApp.activate(options: .activateIgnoringOtherApps)
         }
- */
+    }
+    
+    @objc func openUnibar (btn: NSStatusBarButton) {
+        // Save previously activated app
+        _previousActivatedApp = NSWorkspace.shared.frontmostApplication
+        
+        // Create and present the UniBar main menu
+        windowUniMain = NSStoryboard(name : "Main", bundle: nil).instantiateController(withIdentifier: "windowDefault") as! NSWindowController
+        windowUniMain.window?.contentViewController = vcUniMain
+        windowUniMain.window?.makeKeyAndOrderFront(self)
+        windowUniMain.window?.level = NSWindow.Level(rawValue: Int(CGWindowLevelForKey(.mainMenuWindow)))
+        windowUniMain.window?.collectionBehavior = [.stationary, .ignoresCycle, .canJoinAllSpaces, .fullScreenAuxiliary]
+        windowUniMain.window?.setFrameOrigin(NSPoint(
+            x: (NSScreen.main?.visibleFrame.origin.x)! + (NSScreen.main?.visibleFrame.size.width)! - (windowUniMain.window?.frame.size.width)!,
+            y: (NSScreen.main?.visibleFrame.origin.y)! + (NSScreen.main?.visibleFrame.size.height)! - (windowUniMain.window?.frame.size.height)!))
+        windowUniMain.window?.makeKey()
+        
+        // Visual initialization of the window
+        windowUniMain.window?.isMovable = false
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        
+        vcUniMain = frmUniMain.freshController()
         
         // Initialization
         UnibarMain.delegate = self
@@ -92,19 +93,32 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
         popUniMain.behavior = .transient
         popUniMain.animates = false
         popUniMain.appearance = NSAppearance(named: NSAppearance.Name.vibrantDark)
-        popUniMain.contentViewController = frmUniMain.freshController()
+        popUniMain.contentViewController = vcUniMain
         
         // Set Icon
         let menuIcon = NSImage(named: "MenuIcon")
         menuIcon?.isTemplate = true
         UnibarIcon.image = menuIcon
-        //UnibarIcon.menu = UnibarMain
+//        UnibarIcon.menu = UnibarMain
         UnibarIcon.target = self
-        UnibarIcon.action = #selector(AppDelegate.openUnibar)
-        //uniSearchBar.view = vSearchBar
-        
-        
+        UnibarIcon.action = #selector(AppDelegate.hotkeyTriggered)
+//        uniSearchBar.view = vSearchBar
         statusbutton = UnibarIcon.button!
+        
+        // Setup for exiting event
+        NSEvent.addGlobalMonitorForEvents(matching: .leftMouseDown) { (e) in
+            self.outsideClick(event: e)
+        }
+        NSEvent.addGlobalMonitorForEvents(matching: .otherMouseDown) { (e) in
+            self.outsideClick(event: e)
+        }
+        NSEvent.addGlobalMonitorForEvents(matching: .rightMouseDown) { (e) in
+            self.outsideClick(event: e)
+        }
+    }
+    var _e1: NSEvent!, _e2: NSEvent!, _e3: NSEvent!
+    func outsideClick (event: NSEvent) {
+        hideUnibar(resetFocus: false)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

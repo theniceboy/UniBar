@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="gjR-6G-kDp">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14306.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="TLd-Ni-TyC">
+            <objects>
+                <viewController id="e75-nu-cnr" sceneMemberID="viewController">
+                    <view key="view" id="0Gi-Wm-kwR">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="oEn-5t-MOc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="-198"/>
+        </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
             <objects>
@@ -722,15 +735,34 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="UqL-XW-Aa2">
+            <objects>
+                <windowController storyboardIdentifier="windowDefault" id="4i1-YL-gHJ" sceneMemberID="viewController">
+                    <window key="window" title="UniBar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" appearanceType="aqua" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="W0I-i8-nEG">
+                        <windowStyleMask key="styleMask" titled="YES" texturedBackground="YES" fullSizeContentView="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" stationary="YES" fullScreenAuxiliary="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="4i1-YL-gHJ" id="nu2-Qc-OJ2"/>
+                        </connections>
+                    </window>
+                </windowController>
+                <customObject id="W0M-7Q-d2T" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576" y="234"/>
+        </scene>
         <!--menu-->
         <scene sceneID="TcK-MB-ZxP">
             <objects>
                 <viewController title="menu" identifier="frmUniMain" storyboardIdentifier="frmUniMain" id="gjR-6G-kDp" customClass="frmUniMain" customModule="UniBar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="uHj-MW-iuh">
+                    <view key="view" appearanceType="aqua" id="uHj-MW-iuh">
                         <rect key="frame" x="0.0" y="0.0" width="425" height="364"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="rHY-V1-JIk">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="rHY-V1-JIk" customClass="whiteNSView" customModule="UniBar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="425" height="364"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-Ok-GKN" customClass="FlatButton" customModule="UniBar" customModuleProvider="target">
@@ -802,34 +834,40 @@
                                             <action selector="btnQuit_Clicked:" target="gjR-6G-kDp" id="AEY-K6-Rr3"/>
                                         </connections>
                                     </button>
-                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efu-A9-KVB">
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="efu-A9-KVB">
                                         <rect key="frame" x="0.0" y="286" width="425" height="78"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
-                                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYr-oi-dYK">
-                                                <rect key="frame" x="49" y="20" width="330" height="22"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                            <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYr-oi-dYK">
+                                                <rect key="frame" x="18" y="38" width="389" height="20"/>
                                                 <textFieldCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" placeholderString="Type to Search" id="W72-2q-I3j">
                                                     <font key="font" metaFont="system" size="15"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vLS-rV-maw">
-                                                <rect key="frame" x="213" y="43" width="81" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Swa-7S-0oy">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                            </button>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="yrg-td-96V">
+                                                <rect key="frame" x="10" y="28" width="405" height="40"/>
+                                            </customView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yrg-td-96V" firstAttribute="top" secondItem="efu-A9-KVB" secondAttribute="top" constant="10" id="909-Pn-clk"/>
+                                            <constraint firstAttribute="trailing" secondItem="yrg-td-96V" secondAttribute="trailing" constant="10" id="GeV-Wn-fZT"/>
+                                            <constraint firstItem="bYr-oi-dYK" firstAttribute="trailing" secondItem="yrg-td-96V" secondAttribute="trailing" constant="-10" id="Jup-hh-d7u"/>
+                                            <constraint firstItem="bYr-oi-dYK" firstAttribute="top" secondItem="yrg-td-96V" secondAttribute="top" constant="10" id="NUh-ls-hOJ"/>
+                                            <constraint firstItem="bYr-oi-dYK" firstAttribute="bottom" secondItem="yrg-td-96V" secondAttribute="bottom" constant="-10" id="VDd-OG-k9X"/>
+                                            <constraint firstAttribute="height" constant="78" id="sFq-Yi-nbg"/>
+                                            <constraint firstItem="yrg-td-96V" firstAttribute="leading" secondItem="efu-A9-KVB" secondAttribute="leading" constant="10" id="tbV-wt-W75"/>
+                                            <constraint firstItem="bYr-oi-dYK" firstAttribute="leading" secondItem="yrg-td-96V" secondAttribute="leading" constant="10" id="v9L-2j-cXe"/>
+                                        </constraints>
                                     </customView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="yhA-BO-Llf" secondAttribute="bottom" constant="8" id="3bx-LV-HX5"/>
+                                    <constraint firstItem="efu-A9-KVB" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" id="QVW-76-8ck"/>
                                     <constraint firstAttribute="bottom" secondItem="TLX-Ok-GKN" secondAttribute="bottom" constant="8" id="Qt2-Dk-lWs"/>
                                     <constraint firstItem="TLX-Ok-GKN" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" constant="8" id="Wre-nc-DKc"/>
+                                    <constraint firstItem="efu-A9-KVB" firstAttribute="top" secondItem="rHY-V1-JIk" secondAttribute="top" id="aFq-wb-eqZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="efu-A9-KVB" secondAttribute="trailing" id="aXd-6v-8rT"/>
                                     <constraint firstAttribute="trailing" secondItem="yhA-BO-Llf" secondAttribute="trailing" constant="8" id="nl6-S1-QvP"/>
                                 </constraints>
                             </customView>
@@ -845,24 +883,12 @@
                         <outlet property="btnQuitUibar" destination="yhA-BO-Llf" id="TM7-vd-4eZ"/>
                         <outlet property="btnSettings" destination="TLX-Ok-GKN" id="wlE-5M-gSf"/>
                         <outlet property="tfSearch" destination="bYr-oi-dYK" id="6pd-4D-gjf"/>
+                        <outlet property="v_tfSearch" destination="yrg-td-96V" id="Uyn-zF-3Wf"/>
                     </connections>
                 </viewController>
                 <customObject id="2eS-YT-yBA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="61.5" y="322"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5cv-Ut-2yR">
-            <objects>
-                <viewController id="Ltj-Rt-YpS" sceneMemberID="viewController">
-                    <view key="view" id="rpc-no-oRk">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="aTz-mB-yOG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="574" y="95"/>
         </scene>
     </scenes>
 </document>

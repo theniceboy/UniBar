@@ -16,21 +16,58 @@ class frmUniMain: NSViewController {
     
     @IBOutlet weak var btnSettings: FlatButton!
     @IBOutlet weak var btnQuitUibar: FlatButton!
+    @IBOutlet weak var v_tfSearch: NSView!
+    
+    func uiInitialization () {
+        self.view.wantsLayer = true
+        
+        self.view.layer?.backgroundColor = CGColor.white
+        v_tfSearch.layer?.backgroundColor =
+    }
+    
+    /*
+ NSAnimationContext.runAnimationGroup({_in
+ 
+ //Indicate the duration of the animation
+ 
+ NSAnimationContext.current().duration = 5.0
+ 
+ //What is being animated? In this example I’m making a view transparent
+ 
+ someView.animator().alphaValue = 0.0
+ 
+ }, completionHandler:{
+ 
+ //In here we add the code that should be triggered after the animation completes.
+ 
+ print(“Animation completed”)
+ 
+ })
+ */
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tfSearch.layer?.borderWidth = 0
-        tfSearch.layer?.allowsEdgeAntialiasing = true
-        
-        if (curShowingStatus == 0) {
-            NSApplication.shared.hide(nil)
-        } else if (curShowingStatus == 1) {
-            curShowingStatus = 0
-        }
+        // Visual customization
+        uiInitialization()
     }
     
+    
     override func viewDidAppear() {
+        print("appeared")
+        
+        // Change flages and status
+        curShowingStatus = 1
+        
+        // Activate window and order front
+        windowUniMain.window?.makeKey()
+        windowUniMain.window?.makeMain()
+        becomeFirstResponder()
+        NSApplication.shared.activate(ignoringOtherApps: true)
+        
+        
+        
+        // User comfort
         tfSearch.becomeFirstResponder()
     }
     
