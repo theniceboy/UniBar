@@ -13,4 +13,4 @@
 
 
 #import <Cocoa/Cocoa.h>
-//#import <Third-Parties/ZXTextField.h>
+#import "Third-Parties/DictionaryKit/DictionaryKit.h"

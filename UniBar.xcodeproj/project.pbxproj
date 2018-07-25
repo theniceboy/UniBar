@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630BFF3C21084743000C6659 /* TTTDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 630BFF3B21084743000C6659 /* TTTDictionary.m */; };
+		630BFF3E210849FE000C6659 /* TTTDictionary.h in Sources */ = {isa = PBXBuildFile; fileRef = 630BFF3A21084743000C6659 /* TTTDictionary.h */; };
+		630BFF3F21084A01000C6659 /* DictionaryKit.h in Sources */ = {isa = PBXBuildFile; fileRef = 630BFF3921084743000C6659 /* DictionaryKit.h */; };
+		630BFF4021084A04000C6659 /* UniBar-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 6386DF342103A60D00E22614 /* UniBar-Bridging-Header.h */; };
 		633442F7210776B0008A7754 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633442F6210776B0008A7754 /* Colors.swift */; };
 		635B2F4121038ACC000D07D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B2F4021038ACC000D07D2 /* AppDelegate.swift */; };
 		635B2F4321038ACC000D07D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B2F4221038ACC000D07D2 /* ViewController.swift */; };
@@ -18,6 +22,28 @@
 		635F9D1921061ED00059C42A /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F9D1821061ED00059C42A /* Magnet.framework */; };
 		635F9D1B21061ED40059C42A /* TaskQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F9D1A21061ED40059C42A /* TaskQueue.framework */; };
 		63BF6C1821060EC400DEF56A /* frmUniMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BF6C1721060EC400DEF56A /* frmUniMain.swift */; };
+		63CDFC5321085CD50041BDC3 /* drop mdict files here.txt in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC3A21085CD50041BDC3 /* drop mdict files here.txt */; };
+		63CDFC5421085CD50041BDC3 /* ripemd128.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC3B21085CD50041BDC3 /* ripemd128.py */; };
+		63CDFC5521085CD50041BDC3 /* mdict_query.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC3C21085CD50041BDC3 /* mdict_query.py */; };
+		63CDFC5621085CD50041BDC3 /* web.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC3D21085CD50041BDC3 /* web.py */; };
+		63CDFC5721085CD50041BDC3 /* o3.js in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC3F21085CD50041BDC3 /* o3.js */; };
+		63CDFC5821085CD50041BDC3 /* mdict-query.sln in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4021085CD50041BDC3 /* mdict-query.sln */; };
+		63CDFC5921085CD50041BDC3 /* test.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4121085CD50041BDC3 /* test.py */; };
+		63CDFC5A21085CD50041BDC3 /* pureSalsa20.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4221085CD50041BDC3 /* pureSalsa20.py */; };
+		63CDFC5B21085CD50041BDC3 /* web.spec in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4321085CD50041BDC3 /* web.spec */; };
+		63CDFC5C21085CD50041BDC3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4421085CD50041BDC3 /* README.md */; };
+		63CDFC5D21085CD50041BDC3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4521085CD50041BDC3 /* .gitignore */; };
+		63CDFC5E21085CD50041BDC3 /* cache here.txt in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4721085CD50041BDC3 /* cache here.txt */; };
+		63CDFC5F21085CD50041BDC3 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4821085CD50041BDC3 /* .gitattributes */; };
+		63CDFC6021085CD50041BDC3 /* mdict-query.pyproj in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4921085CD50041BDC3 /* mdict-query.pyproj */; };
+		63CDFC6121085CD50041BDC3 /* readmdict.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4A21085CD50041BDC3 /* readmdict.py */; };
+		63CDFC6221085CD50041BDC3 /* lzo.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4B21085CD50041BDC3 /* lzo.py */; };
+		63CDFC6321085CD50041BDC3 /* all.html in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4D21085CD50041BDC3 /* all.html */; };
+		63CDFC6421085CD50041BDC3 /* dict.html in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4E21085CD50041BDC3 /* dict.html */; };
+		63CDFC6521085CD50041BDC3 /* entry.html in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC4F21085CD50041BDC3 /* entry.html */; };
+		63CDFC6621085CD50041BDC3 /* mdict_dir.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC5021085CD50041BDC3 /* mdict_dir.py */; };
+		63CDFC6721085CD50041BDC3 /* test_lzo.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC5121085CD50041BDC3 /* test_lzo.py */; };
+		63CDFC6821085CD50041BDC3 /* wsgi.py in Resources */ = {isa = PBXBuildFile; fileRef = 63CDFC5221085CD50041BDC3 /* wsgi.py */; };
 		B466BE565E35025C79F8603C /* Pods_UniBarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D6C3615526FAC6969DF067 /* Pods_UniBarTests.framework */; };
 		F0BB65B1DCEDC0D1866D3B8E /* Pods_UniBarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0109993ECF5753C2C21E1B56 /* Pods_UniBarUITests.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +71,9 @@
 		221E1A2F444BAFA58C872DDC /* Pods-UniBarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarUITests/Pods-UniBarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38191BD8B94361548E36A8F8 /* Pods-UniBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniBar/Pods-UniBar.release.xcconfig"; sourceTree = "<group>"; };
 		53001BAEA1AB6D36A997A60D /* Pods_UniBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		630BFF3921084743000C6659 /* DictionaryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryKit.h; sourceTree = "<group>"; };
+		630BFF3A21084743000C6659 /* TTTDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTDictionary.h; sourceTree = "<group>"; };
+		630BFF3B21084743000C6659 /* TTTDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTDictionary.m; sourceTree = "<group>"; };
 		633442F6210776B0008A7754 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = UniBar/Classes/Colors.swift; sourceTree = SOURCE_ROOT; };
 		635B2F3D21038ACC000D07D2 /* UniBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B2F4021038ACC000D07D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +100,28 @@
 		63BAE9C921061CB50029E2E7 /* Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BAE9CB21061CB90029E2E7 /* TaskQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TaskQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BF6C1721060EC400DEF56A /* frmUniMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = frmUniMain.swift; path = Forms/frmUniMain.swift; sourceTree = "<group>"; };
+		63CDFC3A21085CD50041BDC3 /* drop mdict files here.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "drop mdict files here.txt"; sourceTree = "<group>"; };
+		63CDFC3B21085CD50041BDC3 /* ripemd128.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ripemd128.py; sourceTree = "<group>"; };
+		63CDFC3C21085CD50041BDC3 /* mdict_query.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = mdict_query.py; sourceTree = "<group>"; };
+		63CDFC3D21085CD50041BDC3 /* web.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = web.py; sourceTree = "<group>"; };
+		63CDFC3F21085CD50041BDC3 /* o3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = o3.js; sourceTree = "<group>"; };
+		63CDFC4021085CD50041BDC3 /* mdict-query.sln */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mdict-query.sln"; sourceTree = "<group>"; };
+		63CDFC4121085CD50041BDC3 /* test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
+		63CDFC4221085CD50041BDC3 /* pureSalsa20.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pureSalsa20.py; sourceTree = "<group>"; };
+		63CDFC4321085CD50041BDC3 /* web.spec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = web.spec; sourceTree = "<group>"; };
+		63CDFC4421085CD50041BDC3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		63CDFC4521085CD50041BDC3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		63CDFC4721085CD50041BDC3 /* cache here.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cache here.txt"; sourceTree = "<group>"; };
+		63CDFC4821085CD50041BDC3 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		63CDFC4921085CD50041BDC3 /* mdict-query.pyproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "mdict-query.pyproj"; sourceTree = "<group>"; };
+		63CDFC4A21085CD50041BDC3 /* readmdict.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = readmdict.py; sourceTree = "<group>"; };
+		63CDFC4B21085CD50041BDC3 /* lzo.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = lzo.py; sourceTree = "<group>"; };
+		63CDFC4D21085CD50041BDC3 /* all.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = all.html; sourceTree = "<group>"; };
+		63CDFC4E21085CD50041BDC3 /* dict.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dict.html; sourceTree = "<group>"; };
+		63CDFC4F21085CD50041BDC3 /* entry.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = entry.html; sourceTree = "<group>"; };
+		63CDFC5021085CD50041BDC3 /* mdict_dir.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = mdict_dir.py; sourceTree = "<group>"; };
+		63CDFC5121085CD50041BDC3 /* test_lzo.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = test_lzo.py; sourceTree = "<group>"; };
+		63CDFC5221085CD50041BDC3 /* wsgi.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = wsgi.py; sourceTree = "<group>"; };
 		63FAEAAB210465BD0087FC70 /* Magnet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Magnet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FCA1D6210619B6007DDDCD /* FlatButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FlatButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC10BCF8D19DD9C568C2AA8 /* Pods-UniBarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniBarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniBarTests/Pods-UniBarTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,13 +193,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		633442F321076CD2008A7754 /* Classes */ = {
+		63080CC62108613B00C82533 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				633442F6210776B0008A7754 /* Colors.swift */,
 			);
-			name = Classes;
-			path = "New Group";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		630BFF3821084743000C6659 /* DictionaryKit */ = {
+			isa = PBXGroup;
+			children = (
+				630BFF3921084743000C6659 /* DictionaryKit.h */,
+				630BFF3A21084743000C6659 /* TTTDictionary.h */,
+				630BFF3B21084743000C6659 /* TTTDictionary.m */,
+			);
+			path = DictionaryKit;
 			sourceTree = "<group>";
 		};
 		635B2F3421038ACC000D07D2 = {
@@ -176,7 +236,8 @@
 		635B2F3F21038ACC000D07D2 /* UniBar */ = {
 			isa = PBXGroup;
 			children = (
-				633442F321076CD2008A7754 /* Classes */,
+				63080CC62108613B00C82533 /* Classes */,
+				63BF6C1721060EC400DEF56A /* frmUniMain.swift */,
 				635B2F4021038ACC000D07D2 /* AppDelegate.swift */,
 				635B2F4221038ACC000D07D2 /* ViewController.swift */,
 				635B2F4421038ACE000D07D2 /* Assets.xcassets */,
@@ -185,7 +246,6 @@
 				635B2F4A21038ACE000D07D2 /* UniBar.entitlements */,
 				6386DF342103A60D00E22614 /* UniBar-Bridging-Header.h */,
 				6386DF372104351800E22614 /* Third-Parties */,
-				63BF6C1721060EC400DEF56A /* frmUniMain.swift */,
 			);
 			path = UniBar;
 			sourceTree = "<group>";
@@ -211,9 +271,72 @@
 		6386DF372104351800E22614 /* Third-Parties */ = {
 			isa = PBXGroup;
 			children = (
+				63CDFC3821085CD50041BDC3 /* mdict-query */,
+				630BFF3821084743000C6659 /* DictionaryKit */,
 				635F9D1621061E890059C42A /* FlatButton.swift */,
 			);
 			path = "Third-Parties";
+			sourceTree = "<group>";
+		};
+		63CDFC3821085CD50041BDC3 /* mdict-query */ = {
+			isa = PBXGroup;
+			children = (
+				63CDFC3921085CD50041BDC3 /* mdx */,
+				63CDFC3B21085CD50041BDC3 /* ripemd128.py */,
+				63CDFC3C21085CD50041BDC3 /* mdict_query.py */,
+				63CDFC3D21085CD50041BDC3 /* web.py */,
+				63CDFC3E21085CD50041BDC3 /* cache */,
+				63CDFC4021085CD50041BDC3 /* mdict-query.sln */,
+				63CDFC4121085CD50041BDC3 /* test.py */,
+				63CDFC4221085CD50041BDC3 /* pureSalsa20.py */,
+				63CDFC4321085CD50041BDC3 /* web.spec */,
+				63CDFC4421085CD50041BDC3 /* README.md */,
+				63CDFC4521085CD50041BDC3 /* .gitignore */,
+				63CDFC4621085CD50041BDC3 /* static */,
+				63CDFC4821085CD50041BDC3 /* .gitattributes */,
+				63CDFC4921085CD50041BDC3 /* mdict-query.pyproj */,
+				63CDFC4A21085CD50041BDC3 /* readmdict.py */,
+				63CDFC4B21085CD50041BDC3 /* lzo.py */,
+				63CDFC4C21085CD50041BDC3 /* templates */,
+				63CDFC5021085CD50041BDC3 /* mdict_dir.py */,
+				63CDFC5121085CD50041BDC3 /* test_lzo.py */,
+				63CDFC5221085CD50041BDC3 /* wsgi.py */,
+			);
+			path = "mdict-query";
+			sourceTree = "<group>";
+		};
+		63CDFC3921085CD50041BDC3 /* mdx */ = {
+			isa = PBXGroup;
+			children = (
+				63CDFC3A21085CD50041BDC3 /* drop mdict files here.txt */,
+			);
+			path = mdx;
+			sourceTree = "<group>";
+		};
+		63CDFC3E21085CD50041BDC3 /* cache */ = {
+			isa = PBXGroup;
+			children = (
+				63CDFC3F21085CD50041BDC3 /* o3.js */,
+			);
+			path = cache;
+			sourceTree = "<group>";
+		};
+		63CDFC4621085CD50041BDC3 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				63CDFC4721085CD50041BDC3 /* cache here.txt */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		63CDFC4C21085CD50041BDC3 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				63CDFC4D21085CD50041BDC3 /* all.html */,
+				63CDFC4E21085CD50041BDC3 /* dict.html */,
+				63CDFC4F21085CD50041BDC3 /* entry.html */,
+			);
+			path = templates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,8 +452,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CDFC6821085CD50041BDC3 /* wsgi.py in Resources */,
+				63CDFC5921085CD50041BDC3 /* test.py in Resources */,
+				63CDFC6121085CD50041BDC3 /* readmdict.py in Resources */,
+				63CDFC5521085CD50041BDC3 /* mdict_query.py in Resources */,
+				63CDFC6521085CD50041BDC3 /* entry.html in Resources */,
+				63CDFC5621085CD50041BDC3 /* web.py in Resources */,
+				63CDFC6421085CD50041BDC3 /* dict.html in Resources */,
 				635B2F4521038ACE000D07D2 /* Assets.xcassets in Resources */,
 				635B2F4821038ACE000D07D2 /* Main.storyboard in Resources */,
+				63CDFC6221085CD50041BDC3 /* lzo.py in Resources */,
+				63CDFC5721085CD50041BDC3 /* o3.js in Resources */,
+				63CDFC6621085CD50041BDC3 /* mdict_dir.py in Resources */,
+				63CDFC5C21085CD50041BDC3 /* README.md in Resources */,
+				63CDFC5B21085CD50041BDC3 /* web.spec in Resources */,
+				63CDFC6021085CD50041BDC3 /* mdict-query.pyproj in Resources */,
+				63CDFC5E21085CD50041BDC3 /* cache here.txt in Resources */,
+				63CDFC5321085CD50041BDC3 /* drop mdict files here.txt in Resources */,
+				63CDFC5F21085CD50041BDC3 /* .gitattributes in Resources */,
+				63CDFC5821085CD50041BDC3 /* mdict-query.sln in Resources */,
+				63CDFC5421085CD50041BDC3 /* ripemd128.py in Resources */,
+				63CDFC6321085CD50041BDC3 /* all.html in Resources */,
+				63CDFC5D21085CD50041BDC3 /* .gitignore in Resources */,
+				63CDFC6721085CD50041BDC3 /* test_lzo.py in Resources */,
+				63CDFC5A21085CD50041BDC3 /* pureSalsa20.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,10 +652,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630BFF4021084A04000C6659 /* UniBar-Bridging-Header.h in Sources */,
+				630BFF3F21084A01000C6659 /* DictionaryKit.h in Sources */,
+				630BFF3E210849FE000C6659 /* TTTDictionary.h in Sources */,
 				635B2F4321038ACC000D07D2 /* ViewController.swift in Sources */,
 				63BF6C1821060EC400DEF56A /* frmUniMain.swift in Sources */,
 				635F9D1721061E890059C42A /* FlatButton.swift in Sources */,
 				633442F7210776B0008A7754 /* Colors.swift in Sources */,
+				630BFF3C21084743000C6659 /* TTTDictionary.m in Sources */,
 				635B2F4121038ACC000D07D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

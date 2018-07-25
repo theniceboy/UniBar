@@ -11,3 +11,4 @@ import Foundation
 fileprivate let lg1: CGFloat = 240.0, lg2: CGFloat = 220.0
 let colorLightGray1: CGColor = CGColor(red: lg1 / 255.0, green: lg1 / 255.0, blue: lg1 / 255.0, alpha: 1.0)
 let colorLightGray2: CGColor = CGColor(red: lg2 / 255.0, green: lg2 / 255.0, blue: lg2 / 255.0, alpha: 1.0)
+

@@ -7,17 +7,24 @@
 //
 
 import Cocoa
+import Python
+
 
 var curShowingStatus: Int = 0
 
 class frmUniMain: NSViewController, NSTextFieldDelegate {
 
+    // Outlets
     @IBOutlet weak var tfSearch: NSTextField!
     
     @IBOutlet weak var btnSettings: FlatButton!
     @IBOutlet weak var btnQuitUibar: FlatButton!
     @IBOutlet weak var v_tfSearch: NSView!
     
+    // In-class variables
+    var dict: TTTDictionary = TTTDictionary(named: "Apple Dictionary")
+    
+    // Initialization
     func uiInitialization () {
         self.view.wantsLayer = true
         v_tfSearch.wantsLayer = true
@@ -26,6 +33,7 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
         self.view.layer?.backgroundColor = CGColor.white
         v_tfSearch.layer?.backgroundColor = colorLightGray1
         v_tfSearch.layer?.cornerRadius = 4
+        
     }
     
     /*
@@ -53,6 +61,9 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
         
         // Needed setups
         tfSearch.delegate = self
+        
+        // Setup dictionary
+        Py_Initialize()
         
         // Visual customization
         uiInitialization()
@@ -85,21 +96,23 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
     @IBAction func btnQuit_Clicked(_ sender: Any) {
         NSApplication.shared.terminate(self)
     }
-
-    // MARK: - Textfield handling
+    @IBOutlet weak var label: NSTextField!
+    
+    // MARK: - Textfild handling
     
     override func controlTextDidChange(_ obj: Notification) {
-        if #available(OSX 10.12, *) {
-            NSAnimationContext.runAnimationGroup({ (context) in
-                context.duration = 1
-            }) {
-                self.v_tfSearch.layer?.animate(color: (self.tfSearch.stringValue == "" ? colorLightGray1 : colorLightGray2), keyPath: "backgroundColor", duration: 0.15)
-                // why?
+        // Visual customizations
+        self.v_tfSearch.layer?.animate(color: (self.tfSearch.stringValue == "" ? colorLightGray1 : colorLightGray2), keyPath: "backgroundColor", duration: 0.15)
+        // why?
+        
+        // Look up dictionary
+        if (tfSearch.stringValue != "") {
+            if let entries = dict.entries(forSearchTerm: "apple") {
+                for entry in entries {
+                    print(entry)
+                }
             }
-            
-        } else {
-            // Fallback on earlier versions
-            v_tfSearch.layer?.backgroundColor = (tfSearch.stringValue == "" ? colorLightGray1 : colorLightGray2)
+            //label.stringValue = (dict.entries(forSearchTerm: tfSearch.stringValue)?.first as! TTTDictionaryEntry).text
         }
     }
     
