@@ -13,7 +13,6 @@ import TaskQueue
 
 var statusbutton: NSStatusBarButton = NSStatusBarButton()
 let UnibarIcon = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-var vcUniMain: NSViewController = NSViewController()
 var windowUniMain: NSWindowController = NSWindowController()
 var _previousActivatedApp: NSRunningApplication!
 
@@ -72,7 +71,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
+        // Create & assign viewcontrollers
         vcUniMain = frmUniMain.freshController()
+        vcDictLookup = frmDictLookup.freshController()
+        vcTestingOnly = frmTestingOnly.freshController()
         
         // Initialization
         UnibarMain.delegate = self

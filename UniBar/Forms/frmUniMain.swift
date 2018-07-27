@@ -14,24 +14,20 @@ var curShowingStatus: Int = 0
 class frmUniMain: NSViewController, NSTextFieldDelegate {
 
     // Outlets
-    @IBOutlet weak var tfSearch: NSTextField!
+    //    Containers
+    @IBOutlet weak var cvDictLookup: NSView!
+    
+    @IBOutlet weak var vTestingOnly: NSView!
     
     @IBOutlet weak var btnSettings: FlatButton!
     @IBOutlet weak var btnQuitUibar: FlatButton!
-    @IBOutlet weak var v_tfSearch: NSView!
     
     // In-class variables
     
     // Initialization
     func uiInitialization () {
         self.view.wantsLayer = true
-        v_tfSearch.wantsLayer = true
-        tfSearch.wantsLayer = true
-        
         self.view.layer?.backgroundColor = CGColor.white
-        v_tfSearch.layer?.backgroundColor = colorLightGray1
-        v_tfSearch.layer?.cornerRadius = 4
-        
     }
     
     /*
@@ -54,13 +50,29 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
  })
  */
     
+    func loadDictLookup () {
+        self.addChild(vcDictLookup)
+        cvDictLookup.addSubview(vcDictLookup.view)
+        vcDictLookup.view.frame = cvDictLookup.bounds
+    }
+    
+    func forTestingOnly () {
+        self.addChild(vcTestingOnly)
+        vTestingOnly.addSubview(vcTestingOnly.view)
+        vcTestingOnly.view.frame = vTestingOnly.bounds
+        vTestingOnly.wantsLayer = true
+        
+        //vcTestingOnly.didMove(toParentViewController: self)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Needed setups
-        tfSearch.delegate = self
         
-        // Setup dictionary
+        // Add & load subviewcontrollers
+        loadDictLookup()
+        forTestingOnly() // for testing only
         
         // Visual customization
         uiInitialization()
@@ -79,10 +91,6 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
         becomeFirstResponder()
         NSApplication.shared.activate(ignoringOtherApps: true)
         
-        
-        
-        // User comfort
-        tfSearch.becomeFirstResponder()
     }
     
     
@@ -95,23 +103,7 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
     }
     @IBOutlet weak var label: NSTextField!
     
-    // MARK: - Textfild handling
-    
-    override func controlTextDidChange(_ obj: Notification) {
-        // Visual customizations
-        self.v_tfSearch.layer?.animate(color: (self.tfSearch.stringValue == "" ? colorLightGray1 : colorLightGray2), keyPath: "backgroundColor", duration: 0.15)
-        // why?
-        
-        // Look up dictionary
-        if (tfSearch.stringValue != "") {
-            if let json = dictQuery(pattern: tfSearch.stringValue.trimmingCharacters(in: .whitespacesAndNewlines) + "*") {
-                for dictword in json {
-                    print(dictword.key)
-                }
-            }
-            //label.stringValue = (dict.entries(forSearchTerm: tfSearch.stringValue)?.first as! TTTDictionaryEntry).text
-        }
-    }
+
     
     
 }
