@@ -21,6 +21,10 @@ elif query_type == "wildcard":
     keys = builder.get_mdx_keys(query_word)
     for key in keys:
         dict[key] = builder.mdx_lookup(key)
+elif query_type == "wildcardcount":
+    keys = builder.get_mdx_keys(query_word)
+    print keys.__len__()
+    sys.exit(0)
 
 
 print json.dumps(dict)

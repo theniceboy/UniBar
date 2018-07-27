@@ -43,6 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
     }
     
     @objc public func hideUnibar (resetFocus: Bool) {
+        return
         curShowingStatus = 0
         windowUniMain.window?.close()
         if (resetFocus) {

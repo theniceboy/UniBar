@@ -49,7 +49,7 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
  
  })
  */
-    
+     
     func loadDictLookup () {
         self.addChild(vcDictLookup)
         cvDictLookup.addSubview(vcDictLookup.view)

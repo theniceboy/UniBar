@@ -8,14 +8,14 @@
 
 import Foundation
 
-fileprivate func runDictQueryScript(dictionaryPath: String, pattern: String) -> String? {
+fileprivate func runDictQueryScript(dictionaryPath: String, pattern: String, query_type: String) -> String? {
     guard let scriptPath = Bundle.main.path(forResource: "mdictquery/dictquery", ofType: "py") else {
         return nil
     }
     
     var arguments = [scriptPath]
     arguments.append(dictionaryPath)
-    arguments.append("wildcard")
+    arguments.append(query_type)
     arguments.append(pattern)
     
     let outPipe = Pipe()
@@ -44,7 +44,7 @@ fileprivate func runDictQueryScript(dictionaryPath: String, pattern: String) -> 
 }
 
 func dictQuery (pattern: String) -> [String: String]? {
-    if let jsonString = runDictQueryScript(dictionaryPath: "", pattern: pattern) {
+    if let jsonString = runDictQueryScript(dictionaryPath: "", pattern: pattern, query_type: "wildcard") {
         //print(jsonString)
         do {
             if let dataFromString = jsonString.data(using: .ascii) {
@@ -65,4 +65,13 @@ func dictQuery (pattern: String) -> [String: String]? {
         }
     }
     return nil
+}
+
+func dictWildcardCount (pattern: String) -> Int {
+    if let str = runDictQueryScript(dictionaryPath: "", pattern: pattern, query_type: "wildcardcount") {
+        if let result = Int(str) {
+            return result
+        }
+    }
+    return 0
 }

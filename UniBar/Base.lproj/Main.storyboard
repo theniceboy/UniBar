@@ -877,16 +877,21 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OG1-uX-NWt">
-                                        <rect key="frame" x="0.0" y="269" width="425" height="95"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                    <containerView translatesAutoresizingMaskIntoConstraints="NO" id="OG1-uX-NWt">
+                                        <rect key="frame" x="0.0" y="37" width="425" height="327"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="327" id="WPP-cI-WdE"/>
+                                        </constraints>
                                     </containerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="yhA-BO-Llf" secondAttribute="bottom" constant="8" id="3bx-LV-HX5"/>
+                                    <constraint firstAttribute="trailing" secondItem="OG1-uX-NWt" secondAttribute="trailing" id="8dD-QB-O6u"/>
                                     <constraint firstAttribute="bottom" secondItem="TLX-Ok-GKN" secondAttribute="bottom" constant="8" id="Qt2-Dk-lWs"/>
                                     <constraint firstItem="TLX-Ok-GKN" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" constant="8" id="Wre-nc-DKc"/>
+                                    <constraint firstItem="OG1-uX-NWt" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" id="l6N-Sk-Vr9"/>
                                     <constraint firstAttribute="trailing" secondItem="yhA-BO-Llf" secondAttribute="trailing" constant="8" id="nl6-S1-QvP"/>
+                                    <constraint firstItem="OG1-uX-NWt" firstAttribute="top" secondItem="rHY-V1-JIk" secondAttribute="top" id="vFn-Q4-Mfs"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -914,20 +919,17 @@
             <objects>
                 <viewController identifier="frmDictLookup" storyboardIdentifier="frmDictLookup" id="KIn-jg-f0l" customClass="frmDictLookup" customModule="UniBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" appearanceType="aqua" id="tHX-3u-Xnb">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="497"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="3Kj-iQ-ien">
-                                <rect key="frame" x="0.0" y="215" width="450" height="85"/>
+                                <rect key="frame" x="0.0" y="412" width="450" height="85"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="loX-w3-V6h">
                                         <rect key="frame" x="10" y="30" width="430" height="40"/>
                                     </customView>
                                     <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-Wc-cuC">
                                         <rect key="frame" x="18" y="40" width="414" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="zZ8-fc-KaL"/>
-                                        </constraints>
                                         <textFieldCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" placeholderString="Type to Search" id="9PP-jD-hlR">
                                             <font key="font" metaFont="system" size="15"/>
                                             <color key="textColor" red="0.37242227160000002" green="0.37242227160000002" blue="0.37242227160000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -957,24 +959,35 @@
                                     <constraint firstAttribute="bottom" secondItem="loX-w3-V6h" secondAttribute="bottom" constant="30" id="wkr-uL-Q8X"/>
                                 </constraints>
                             </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="yhj-bm-b7c">
+                                <rect key="frame" x="0.0" y="210" width="450" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="194" id="2Ic-4m-VJq"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="3Kj-iQ-ien" firstAttribute="leading" secondItem="tHX-3u-Xnb" secondAttribute="leading" id="B1M-o0-cDQ"/>
+                            <constraint firstItem="yhj-bm-b7c" firstAttribute="top" secondItem="3Kj-iQ-ien" secondAttribute="bottom" constant="8" id="Fvn-KS-EHZ"/>
+                            <constraint firstAttribute="trailing" secondItem="yhj-bm-b7c" secondAttribute="trailing" id="OcO-jZ-wvV"/>
                             <constraint firstItem="3Kj-iQ-ien" firstAttribute="top" secondItem="tHX-3u-Xnb" secondAttribute="top" id="Voa-54-XLo"/>
                             <constraint firstAttribute="trailing" secondItem="3Kj-iQ-ien" secondAttribute="trailing" id="W53-Vp-Bzh"/>
+                            <constraint firstItem="yhj-bm-b7c" firstAttribute="leading" secondItem="tHX-3u-Xnb" secondAttribute="leading" id="sQg-Io-F47"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="_layout_vDictResultHeight" destination="2Ic-4m-VJq" id="8QR-6B-OhA"/>
                         <outlet property="_layout_v_tfSearch_vSearch" destination="wkr-uL-Q8X" id="ow2-Qc-cOD"/>
                         <outlet property="lbWebSearchHint" destination="zMu-Io-Qo9" id="60y-gi-qQc"/>
                         <outlet property="tfSearch" destination="jkb-Wc-cuC" id="ZaW-gz-aMX"/>
+                        <outlet property="vDictResult" destination="yhj-bm-b7c" id="cEq-Vf-P57"/>
                         <outlet property="vSearch" destination="3Kj-iQ-ien" id="85U-vM-Fag"/>
                         <outlet property="v_tfSearch" destination="loX-w3-V6h" id="8kM-iV-9I1"/>
                     </connections>
                 </viewController>
                 <customObject id="W4J-1f-mAX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510" y="666"/>
+            <point key="canvasLocation" x="510" y="764.5"/>
         </scene>
     </scenes>
 </document>

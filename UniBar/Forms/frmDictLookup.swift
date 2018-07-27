@@ -17,6 +17,8 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var lbWebSearchHint: NSTextField!
     @IBOutlet weak var _layout_v_tfSearch_vSearch: NSLayoutConstraint!
     
+    @IBOutlet weak var vDictResult: NSView!
+    @IBOutlet weak var _layout_vDictResultHeight: NSLayoutConstraint!
     
     // Initialization
     func uiInitialization () {
@@ -28,6 +30,25 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
         v_tfSearch.layer?.backgroundColor = colorLightGray1
         v_tfSearch.layer?.cornerRadius = 4
         
+        // Create/customize Dictionary result area
+        vDictResult.wantsLayer = true
+        vDictResult.layer?.backgroundColor = colorLightGray1
+        vDictResult.layer?.cornerRadius = 6
+        
+        let resultitem = NSView()
+        vDictResult.translatesAutoresizingMaskIntoConstraints = false
+        resultitem.translatesAutoresizingMaskIntoConstraints = false
+        resultitem.wantsLayer = true
+        resultitem.layer?.backgroundColor = CGColor.white
+        resultitem.layer?.cornerRadius = 5
+        //vDictResult.removeConstraints(vDictResult.constraints)
+        vDictResult.addSubview(resultitem)
+        vDictResult.addConstraint(NSLayoutConstraint(item: vDictResult, attribute: .top, relatedBy: .equal, toItem: resultitem, attribute: .top, multiplier: 1, constant: -5))
+        vDictResult.addConstraint(NSLayoutConstraint(item: resultitem, attribute: .leading, relatedBy: .equal, toItem: vDictResult, attribute: .leading, multiplier: 1, constant: 8))
+        vDictResult.addConstraint(NSLayoutConstraint(item: resultitem, attribute: .trailing, relatedBy: .equal, toItem: vDictResult, attribute: .trailing, multiplier: 1, constant: -8))
+        vDictResult.addConstraint(NSLayoutConstraint(item: resultitem, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 30))
+ 
+        vDictResult.layout()
     }
     
     override func viewDidLoad() {
