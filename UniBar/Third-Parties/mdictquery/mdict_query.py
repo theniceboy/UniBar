@@ -50,6 +50,7 @@ class IndexBuilder(object):
                 self._mdd_db = _filename + ".mdd.db"
                 self._make_mdd_index(self._mdd_db)
 
+
         if os.path.isfile(self._mdx_db):
             #read from META table
             conn = sqlite3.connect(self._mdx_db)
@@ -76,15 +77,12 @@ class IndexBuilder(object):
             cursor = conn.execute("SELECT * FROM META WHERE key = \"stylesheet\"")
             for cc in cursor:
                 self._stylesheet = json.loads(cc[1])
-
             cursor = conn.execute("SELECT * FROM META WHERE key = \"title\"")
             for cc in cursor:
                 self._title = cc[1]
-
             cursor = conn.execute("SELECT * FROM META WHERE key = \"description\"")
             for cc in cursor:
                 self._description = cc[1]
-
             #for cc in cursor:
             #    if cc[0] == 'encoding':
             #        self._encoding = cc[1]
@@ -99,6 +97,8 @@ class IndexBuilder(object):
             #        self._description = cc[1]
         else:
             self._make_mdx_index(self._mdx_db)
+
+
 
         if os.path.isfile(_filename + ".mdd"):
             self._mdd_file = _filename + ".mdd"

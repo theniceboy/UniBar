@@ -1,0 +1,27 @@
+import sys
+import json
+from mdict_query import IndexBuilder
+
+
+#if sys.argv.__len__() < 3:
+#    sys.exit(1)
+
+#print sys.argv
+
+dict = {}
+
+query_type = "key" # sys.argv[2]
+query_word = "dedication" #sys.argv[3].strip()
+
+print query_word
+print query_type
+builder = IndexBuilder('/Users/David/Desktop/test/test/dict/lw.mdx')
+print query_word
+print query_type
+
+if query_type == "key":
+    dict[query_word] = builder.mdx_lookup(query_word, True)
+
+print json.dumps(dict)
+#result_text = builder.mdx_lookup('dedication')
+#print result_text

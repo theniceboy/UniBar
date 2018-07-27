@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Python
 
 
 var curShowingStatus: Int = 0
@@ -22,7 +21,6 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var v_tfSearch: NSView!
     
     // In-class variables
-    var dict: TTTDictionary = TTTDictionary(named: "Apple Dictionary")
     
     // Initialization
     func uiInitialization () {
@@ -63,7 +61,6 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
         tfSearch.delegate = self
         
         // Setup dictionary
-        Py_Initialize()
         
         // Visual customization
         uiInitialization()
@@ -107,9 +104,9 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
         
         // Look up dictionary
         if (tfSearch.stringValue != "") {
-            if let entries = dict.entries(forSearchTerm: "apple") {
-                for entry in entries {
-                    print(entry)
+            if let json = dictQuery(pattern: tfSearch.stringValue.trimmingCharacters(in: .whitespacesAndNewlines) + "*") {
+                for dictword in json {
+                    print(dictword.key)
                 }
             }
             //label.stringValue = (dict.entries(forSearchTerm: tfSearch.stringValue)?.first as! TTTDictionaryEntry).text
