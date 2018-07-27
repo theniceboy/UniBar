@@ -18,23 +18,31 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var _layout_v_tfSearch_vSearch: NSLayoutConstraint!
     
     @IBOutlet weak var vDictResult: NSView!
+    @IBOutlet weak var _layout_vDictResultHeight: NSLayoutConstraint!
     
     @IBOutlet weak var vRuler: NSView!
+    
+    // In class constants
+    let _lcDictWordItemHeight: CGFloat = 45
+    let _lcDictWordItemDistance: CGFloat = 5
     
     // In class variables
     var dictResults: [DictWord] = []
     
     // UI work
-    var _layout_vDictResultHeight: NSLayoutConstraint!
     
     func updateParentViewHeight () {
-        self.preferredContentSize = NSSize(width: self.preferredContentSize.width, height: vRuler.frame.height)
+        vcUniMain.updateLookup(height: 500)
+        return
+        //self.preferredContentSize = NSSize(width: self.preferredContentSize.width, height: vRuler.frame.height)
         
         vcUniMain.cvDictLookup.wantsLayer = true
         vcUniMain.cvDictLookup.layer?.backgroundColor = NSColor.blue.cgColor
-        vcUniMain._layout_cvDictLookupHeight.constant = vRuler.frame.height
-        vcUniMain.view.layout()
+        print(vRuler.frame.height)
+        vcUniMain._layout_cvDictLookupHeight.constant = 100 //vRuler.frame.height
         self.view.frame = vcUniMain.cvDictLookup.bounds
+        vcUniMain.view.layout()
+        //
     }
     
     func createLabel () -> NSTextField {
@@ -56,7 +64,7 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
         
         if (dictResults.count == 0) {
             //vDictResult.addConstraint(_layout_vDictResultHeight)
-            //_layout_vDictResultHeight.constant = 0
+            _layout_vDictResultHeight.constant = 0
             //vDictResult.addConstraint(NSLayoutConstraint(item: vDictResult, attribute: .top, relatedBy: .equal, toItem: vDictResult, attribute: .bottom, multiplier: 1, constant: 0))
             //vDictResult.bounds = NSRect(x: 0, y: 0, width: 0, height: 0)
         } else {
@@ -72,12 +80,12 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
                 resultView.layer?.backgroundColor = CGColor.white
                 resultView.layer?.cornerRadius = 5
                 vDictResult.addSubview(resultView)
-                //resultView.frame = NSRect(x: 4, y: curHeight, width: vDictResult.frame.width, height: 35)
                 
-                vDictResult.addConstraint(NSLayoutConstraint(item: previousResultView, attribute: (firstWord ? .top : .bottom), relatedBy: .equal, toItem: resultView, attribute: .top, multiplier: 1, constant: -5))
+                vDictResult.addConstraint(NSLayoutConstraint(item: previousResultView, attribute: (firstWord ? .top : .bottom), relatedBy: .equal, toItem: resultView, attribute: .top, multiplier: 1, constant: -_lcDictWordItemDistance))
                 vDictResult.addConstraint(NSLayoutConstraint(item: resultView, attribute: .leading, relatedBy: .equal, toItem: vDictResult, attribute: .leading, multiplier: 1, constant: 8))
                 vDictResult.addConstraint(NSLayoutConstraint(item: resultView, attribute: .trailing, relatedBy: .equal, toItem: vDictResult, attribute: .trailing, multiplier: 1, constant: -8))
-                vDictResult.addConstraint(NSLayoutConstraint(item: resultView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 45))
+                vDictResult.addConstraint(NSLayoutConstraint(item: resultView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: _lcDictWordItemHeight))
+                curHeight = curHeight + _lcDictWordItemHeight + _lcDictWordItemDistance
  
                 // Create labels for term and definition
                 let lbTerm: NSTextField = createLabel()
@@ -94,13 +102,14 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
                 previousResultView = resultView
                 firstWord = false
             }
+            _layout_vDictResultHeight.constant = curHeight
             //vDictResult.addConstraint(NSLayoutConstraint(item: previousResultView, attribute: .bottom, relatedBy: .equal, toItem: vDictResult, attribute: .bottom, multiplier: 1, constant: 0))
             print("done")
             //vDictResult.layout()
         }
         
         // Update parent viewcontroller
-        //updateParentViewHeight()
+        updateParentViewHeight()
         //vDictResult.layout()
     }
     

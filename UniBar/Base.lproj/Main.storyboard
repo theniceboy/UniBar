@@ -877,21 +877,32 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <containerView translatesAutoresizingMaskIntoConstraints="NO" id="OG1-uX-NWt">
-                                        <rect key="frame" x="0.0" y="286" width="425" height="327"/>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Clz-md-VBq">
+                                        <rect key="frame" x="0.0" y="221" width="425" height="392"/>
+                                        <subviews>
+                                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="OG1-uX-NWt">
+                                                <rect key="frame" x="0.0" y="-4128" width="425" height="4520"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="4520" id="KDw-At-EOz"/>
+                                                </constraints>
+                                            </containerView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="327" id="WPP-cI-WdE"/>
+                                            <constraint firstAttribute="trailing" secondItem="OG1-uX-NWt" secondAttribute="trailing" id="Amq-cT-ZEh"/>
+                                            <constraint firstAttribute="height" constant="392" id="Gql-d9-rPI"/>
+                                            <constraint firstItem="OG1-uX-NWt" firstAttribute="leading" secondItem="Clz-md-VBq" secondAttribute="leading" id="TJE-LV-YHr"/>
+                                            <constraint firstItem="OG1-uX-NWt" firstAttribute="top" secondItem="Clz-md-VBq" secondAttribute="top" id="gsp-R1-Eh6"/>
                                         </constraints>
-                                    </containerView>
+                                    </customView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="yhA-BO-Llf" secondAttribute="bottom" constant="8" id="3bx-LV-HX5"/>
-                                    <constraint firstAttribute="trailing" secondItem="OG1-uX-NWt" secondAttribute="trailing" id="8wh-Ys-kWK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Clz-md-VBq" secondAttribute="trailing" id="KQ9-Zo-k0w"/>
                                     <constraint firstAttribute="bottom" secondItem="TLX-Ok-GKN" secondAttribute="bottom" constant="8" id="Qt2-Dk-lWs"/>
                                     <constraint firstItem="TLX-Ok-GKN" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" constant="8" id="Wre-nc-DKc"/>
-                                    <constraint firstItem="OG1-uX-NWt" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" id="l78-Qa-JIV"/>
                                     <constraint firstAttribute="trailing" secondItem="yhA-BO-Llf" secondAttribute="trailing" constant="8" id="nl6-S1-QvP"/>
-                                    <constraint firstItem="OG1-uX-NWt" firstAttribute="top" secondItem="rHY-V1-JIk" secondAttribute="top" id="vFn-Q4-Mfs"/>
+                                    <constraint firstItem="Clz-md-VBq" firstAttribute="top" secondItem="rHY-V1-JIk" secondAttribute="top" id="uGr-mj-Bj4"/>
+                                    <constraint firstItem="Clz-md-VBq" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" id="vG7-IK-zNv"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -903,12 +914,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="_layout_cvDictLookupHeight" destination="WPP-cI-WdE" id="voe-3x-9RE"/>
+                        <outlet property="_layout_cvDictLookupHeight" destination="Gql-d9-rPI" id="jfY-y1-3th"/>
                         <outlet property="btnQuitUibar" destination="yhA-BO-Llf" id="TM7-vd-4eZ"/>
                         <outlet property="btnSettings" destination="TLX-Ok-GKN" id="wlE-5M-gSf"/>
-                        <outlet property="cvDictLookup" destination="OG1-uX-NWt" id="p2D-dA-iLM"/>
+                        <outlet property="cvDictLookup" destination="OG1-uX-NWt" id="1wk-dM-4vu"/>
                         <outlet property="label" destination="xqu-Bd-Qdi" id="giO-MA-xj1"/>
                         <outlet property="vTestingOnly" destination="7A1-cJ-I6a" id="LFt-Qb-t42"/>
+                        <outlet property="vcvDictLookup" destination="Clz-md-VBq" id="uHi-w7-snG"/>
                     </connections>
                 </viewController>
                 <customObject id="2eS-YT-yBA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -924,7 +936,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="3Kj-iQ-ien">
-                                <rect key="frame" x="0.0" y="392" width="450" height="105"/>
+                                <rect key="frame" x="0.0" y="412" width="450" height="85"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="loX-w3-V6h">
                                         <rect key="frame" x="10" y="30" width="430" height="40"/>
@@ -953,7 +965,7 @@
                                     <constraint firstItem="jkb-Wc-cuC" firstAttribute="bottom" secondItem="loX-w3-V6h" secondAttribute="bottom" constant="-10" id="U9g-YM-3kx"/>
                                     <constraint firstAttribute="trailing" secondItem="zMu-Io-Qo9" secondAttribute="trailing" constant="20" id="Y3S-LK-orl"/>
                                     <constraint firstItem="jkb-Wc-cuC" firstAttribute="leading" secondItem="loX-w3-V6h" secondAttribute="leading" constant="10" id="kEi-Kc-XVN"/>
-                                    <constraint firstItem="loX-w3-V6h" firstAttribute="top" secondItem="3Kj-iQ-ien" secondAttribute="top" constant="35" id="mFH-hV-haG"/>
+                                    <constraint firstItem="loX-w3-V6h" firstAttribute="top" secondItem="3Kj-iQ-ien" secondAttribute="top" constant="15" id="mFH-hV-haG"/>
                                     <constraint firstItem="jkb-Wc-cuC" firstAttribute="trailing" secondItem="loX-w3-V6h" secondAttribute="trailing" constant="-10" id="osn-G6-XSe"/>
                                     <constraint firstAttribute="bottom" secondItem="zMu-Io-Qo9" secondAttribute="bottom" constant="7" id="tok-oL-xKg"/>
                                     <constraint firstAttribute="trailing" secondItem="loX-w3-V6h" secondAttribute="trailing" constant="10" id="uKz-GB-7rL"/>
@@ -961,13 +973,13 @@
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="yhj-bm-b7c">
-                                <rect key="frame" x="0.0" y="190" width="450" height="194"/>
+                                <rect key="frame" x="0.0" y="210" width="450" height="194"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="194" id="2Ic-4m-VJq"/>
                                 </constraints>
                             </customView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="CJZ-RT-2Qh">
-                                <rect key="frame" x="253" y="190" width="197" height="307"/>
+                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJZ-RT-2Qh">
+                                <rect key="frame" x="253" y="210" width="197" height="287"/>
                             </customView>
                         </subviews>
                         <constraints>
@@ -984,6 +996,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="_layout_vDictResultHeight" destination="2Ic-4m-VJq" id="9V6-aS-IOv"/>
                         <outlet property="_layout_v_tfSearch_vSearch" destination="wkr-uL-Q8X" id="ow2-Qc-cOD"/>
                         <outlet property="lbWebSearchHint" destination="zMu-Io-Qo9" id="60y-gi-qQc"/>
                         <outlet property="tfSearch" destination="jkb-Wc-cuC" id="ZaW-gz-aMX"/>

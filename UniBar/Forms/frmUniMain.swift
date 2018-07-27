@@ -15,6 +15,7 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
 
     // Outlets
     //    Containers
+    @IBOutlet weak public var vcvDictLookup: NSView! // Father
     @IBOutlet weak public var cvDictLookup: NSView!
     @IBOutlet weak public var _layout_cvDictLookupHeight: NSLayoutConstraint!
     
@@ -51,13 +52,22 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
  })
  */
     
+    public func updateLookup (height: CGFloat) {
+        _layout_cvDictLookupHeight.constant = height
+        //self.view.layout()
+        //cvDictLookup.subviews.removeAll()
+        //print("removed, ez")
+        //loadDictLookup()
+        //vcDictLookup.view.frame = NSRect(x: 0, y: -500, width: self.view.frame.width, height: 100)
+    }
+    
     func loadDictLookup () {
         self.addChild(vcDictLookup)
         cvDictLookup.addSubview(vcDictLookup.view)
         let f = cvDictLookup.bounds
-        print(f)
+        //print(f)
         vcDictLookup.view.frame = f
-        print(vcDictLookup.view.frame)
+        //print(vcDictLookup.view.frame)
         /*
         cvDictLookup.addConstraint(NSLayoutConstraint(item: cvDictLookup, attribute: .top, relatedBy: .equal, toItem: vcDictLookup.view, attribute: .top, multiplier: 1, constant: 0))
         cvDictLookup.addConstraint(NSLayoutConstraint(item: cvDictLookup, attribute: .bottom, relatedBy: .equal, toItem: vcDictLookup.view, attribute: .bottom, multiplier: 1, constant: 0))
