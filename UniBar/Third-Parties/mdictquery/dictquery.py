@@ -19,8 +19,12 @@ if query_type == "key":
     dict[query_word] = builder.mdx_lookup(query_word, True)
 elif query_type == "wildcard":
     keys = builder.get_mdx_keys(query_word)
+    count = 0
     for key in keys:
+        count += 1
         dict[key] = builder.mdx_lookup(key)
+        if count > 10:
+            break
 elif query_type == "wildcardcount":
     keys = builder.get_mdx_keys(query_word)
     print keys.__len__()

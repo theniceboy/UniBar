@@ -789,11 +789,11 @@
             <objects>
                 <viewController title="menu" identifier="frmUniMain" storyboardIdentifier="frmUniMain" id="gjR-6G-kDp" customClass="frmUniMain" customModule="UniBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" appearanceType="aqua" id="uHj-MW-iuh">
-                        <rect key="frame" x="0.0" y="0.0" width="425" height="364"/>
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="613"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="rHY-V1-JIk">
-                                <rect key="frame" x="0.0" y="0.0" width="425" height="364"/>
+                                <rect key="frame" x="0.0" y="0.0" width="425" height="613"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-Ok-GKN" customClass="FlatButton" customModule="UniBar" customModuleProvider="target">
                                         <rect key="frame" x="2" y="1" width="91" height="32"/>
@@ -878,7 +878,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <containerView translatesAutoresizingMaskIntoConstraints="NO" id="OG1-uX-NWt">
-                                        <rect key="frame" x="0.0" y="37" width="425" height="327"/>
+                                        <rect key="frame" x="0.0" y="286" width="425" height="327"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="327" id="WPP-cI-WdE"/>
                                         </constraints>
@@ -886,10 +886,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="yhA-BO-Llf" secondAttribute="bottom" constant="8" id="3bx-LV-HX5"/>
-                                    <constraint firstAttribute="trailing" secondItem="OG1-uX-NWt" secondAttribute="trailing" id="8dD-QB-O6u"/>
+                                    <constraint firstAttribute="trailing" secondItem="OG1-uX-NWt" secondAttribute="trailing" id="8wh-Ys-kWK"/>
                                     <constraint firstAttribute="bottom" secondItem="TLX-Ok-GKN" secondAttribute="bottom" constant="8" id="Qt2-Dk-lWs"/>
                                     <constraint firstItem="TLX-Ok-GKN" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" constant="8" id="Wre-nc-DKc"/>
-                                    <constraint firstItem="OG1-uX-NWt" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" id="l6N-Sk-Vr9"/>
+                                    <constraint firstItem="OG1-uX-NWt" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" id="l78-Qa-JIV"/>
                                     <constraint firstAttribute="trailing" secondItem="yhA-BO-Llf" secondAttribute="trailing" constant="8" id="nl6-S1-QvP"/>
                                     <constraint firstItem="OG1-uX-NWt" firstAttribute="top" secondItem="rHY-V1-JIk" secondAttribute="top" id="vFn-Q4-Mfs"/>
                                 </constraints>
@@ -903,6 +903,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="_layout_cvDictLookupHeight" destination="WPP-cI-WdE" id="voe-3x-9RE"/>
                         <outlet property="btnQuitUibar" destination="yhA-BO-Llf" id="TM7-vd-4eZ"/>
                         <outlet property="btnSettings" destination="TLX-Ok-GKN" id="wlE-5M-gSf"/>
                         <outlet property="cvDictLookup" destination="OG1-uX-NWt" id="p2D-dA-iLM"/>
@@ -912,7 +913,7 @@
                 </viewController>
                 <customObject id="2eS-YT-yBA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566.5" y="249"/>
+            <point key="canvasLocation" x="42.5" y="432.5"/>
         </scene>
         <!--Frm Dict Lookup-->
         <scene sceneID="T6i-RC-x6J">
@@ -923,7 +924,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="3Kj-iQ-ien">
-                                <rect key="frame" x="0.0" y="412" width="450" height="85"/>
+                                <rect key="frame" x="0.0" y="392" width="450" height="105"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="loX-w3-V6h">
                                         <rect key="frame" x="10" y="30" width="430" height="40"/>
@@ -952,7 +953,7 @@
                                     <constraint firstItem="jkb-Wc-cuC" firstAttribute="bottom" secondItem="loX-w3-V6h" secondAttribute="bottom" constant="-10" id="U9g-YM-3kx"/>
                                     <constraint firstAttribute="trailing" secondItem="zMu-Io-Qo9" secondAttribute="trailing" constant="20" id="Y3S-LK-orl"/>
                                     <constraint firstItem="jkb-Wc-cuC" firstAttribute="leading" secondItem="loX-w3-V6h" secondAttribute="leading" constant="10" id="kEi-Kc-XVN"/>
-                                    <constraint firstItem="loX-w3-V6h" firstAttribute="top" secondItem="3Kj-iQ-ien" secondAttribute="top" constant="15" id="mFH-hV-haG"/>
+                                    <constraint firstItem="loX-w3-V6h" firstAttribute="top" secondItem="3Kj-iQ-ien" secondAttribute="top" constant="35" id="mFH-hV-haG"/>
                                     <constraint firstItem="jkb-Wc-cuC" firstAttribute="trailing" secondItem="loX-w3-V6h" secondAttribute="trailing" constant="-10" id="osn-G6-XSe"/>
                                     <constraint firstAttribute="bottom" secondItem="zMu-Io-Qo9" secondAttribute="bottom" constant="7" id="tok-oL-xKg"/>
                                     <constraint firstAttribute="trailing" secondItem="loX-w3-V6h" secondAttribute="trailing" constant="10" id="uKz-GB-7rL"/>
@@ -960,34 +961,41 @@
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="yhj-bm-b7c">
-                                <rect key="frame" x="0.0" y="210" width="450" height="194"/>
+                                <rect key="frame" x="0.0" y="190" width="450" height="194"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="194" id="2Ic-4m-VJq"/>
                                 </constraints>
                             </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="CJZ-RT-2Qh">
+                                <rect key="frame" x="253" y="190" width="197" height="307"/>
+                            </customView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="CJZ-RT-2Qh" firstAttribute="bottom" secondItem="yhj-bm-b7c" secondAttribute="bottom" id="6FD-mI-Vg1"/>
+                            <constraint firstAttribute="trailing" secondItem="CJZ-RT-2Qh" secondAttribute="trailing" id="7c8-Zo-PVe"/>
                             <constraint firstItem="3Kj-iQ-ien" firstAttribute="leading" secondItem="tHX-3u-Xnb" secondAttribute="leading" id="B1M-o0-cDQ"/>
                             <constraint firstItem="yhj-bm-b7c" firstAttribute="top" secondItem="3Kj-iQ-ien" secondAttribute="bottom" constant="8" id="Fvn-KS-EHZ"/>
                             <constraint firstAttribute="trailing" secondItem="yhj-bm-b7c" secondAttribute="trailing" id="OcO-jZ-wvV"/>
                             <constraint firstItem="3Kj-iQ-ien" firstAttribute="top" secondItem="tHX-3u-Xnb" secondAttribute="top" id="Voa-54-XLo"/>
                             <constraint firstAttribute="trailing" secondItem="3Kj-iQ-ien" secondAttribute="trailing" id="W53-Vp-Bzh"/>
+                            <constraint firstItem="CJZ-RT-2Qh" firstAttribute="leading" secondItem="tHX-3u-Xnb" secondAttribute="leading" constant="253" id="ZU3-K4-IyP"/>
+                            <constraint firstItem="CJZ-RT-2Qh" firstAttribute="top" secondItem="tHX-3u-Xnb" secondAttribute="top" id="qGP-Ki-jYP"/>
                             <constraint firstItem="yhj-bm-b7c" firstAttribute="leading" secondItem="tHX-3u-Xnb" secondAttribute="leading" id="sQg-Io-F47"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="_layout_vDictResultHeight" destination="2Ic-4m-VJq" id="8QR-6B-OhA"/>
                         <outlet property="_layout_v_tfSearch_vSearch" destination="wkr-uL-Q8X" id="ow2-Qc-cOD"/>
                         <outlet property="lbWebSearchHint" destination="zMu-Io-Qo9" id="60y-gi-qQc"/>
                         <outlet property="tfSearch" destination="jkb-Wc-cuC" id="ZaW-gz-aMX"/>
                         <outlet property="vDictResult" destination="yhj-bm-b7c" id="cEq-Vf-P57"/>
+                        <outlet property="vRuler" destination="CJZ-RT-2Qh" id="z69-C2-uVi"/>
                         <outlet property="vSearch" destination="3Kj-iQ-ien" id="85U-vM-Fag"/>
                         <outlet property="v_tfSearch" destination="loX-w3-V6h" id="8kM-iV-9I1"/>
                     </connections>
                 </viewController>
                 <customObject id="W4J-1f-mAX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510" y="764.5"/>
+            <point key="canvasLocation" x="538" y="374.5"/>
         </scene>
     </scenes>
 </document>

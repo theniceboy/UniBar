@@ -45,17 +45,11 @@ fileprivate func runDictQueryScript(dictionaryPath: String, pattern: String, que
 
 func dictQuery (pattern: String) -> [String: String]? {
     if let jsonString = runDictQueryScript(dictionaryPath: "", pattern: pattern, query_type: "wildcard") {
-        //print(jsonString)
         do {
             if let dataFromString = jsonString.data(using: .ascii) {
-                print(dataFromString)
-                print(jsonString )
                 let jsondata = try JSON(data: dataFromString)
-                print(jsondata)
                 var result: [String: String] = [:]
                 for (key, def): (String, JSON) in jsondata {
-                    print(key)
-                    print(def)
                     result[key] = def.stringValue
                 }
                 return result
