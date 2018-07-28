@@ -35,7 +35,7 @@ fileprivate func runDictQueryScript(dictionaryPath: String, pattern: String, que
     
     let exitCode = task.terminationStatus
     if (exitCode != 0) {
-        print(String(data: data, encoding: String.Encoding.ascii))
+        print(String(data: data, encoding: String.Encoding.utf8))
         print("ERROR: \(exitCode)")
         return nil
     }
@@ -46,11 +46,12 @@ fileprivate func runDictQueryScript(dictionaryPath: String, pattern: String, que
 func dictQuery (pattern: String) -> [String: String]? {
     if let jsonString = runDictQueryScript(dictionaryPath: "", pattern: pattern, query_type: "wildcard") {
         do {
-            if let dataFromString = jsonString.data(using: .ascii) {
+            if let dataFromString = jsonString.data(using: .utf8) {
                 let jsondata = try JSON(data: dataFromString)
                 var result: [String: String] = [:]
                 for (key, def): (String, JSON) in jsondata {
-                    result[key] = def.stringValue
+                    //print(def[0])
+                    result[key] = def[0].string
                 }
                 return result
             }

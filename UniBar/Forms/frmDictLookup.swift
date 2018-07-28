@@ -25,24 +25,38 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
     // In class constants
     let _lcDictWordItemHeight: CGFloat = 45
     let _lcDictWordItemDistance: CGFloat = 5
+    let _lcDictWordLabeMarginHor: CGFloat = 6
+    let _lcDictWordLabeMarginVer: CGFloat = 6
+    let _lcDictWordLabeMarginBetw: CGFloat = 4
     
     // In class variables
     var dictResults: [DictWord] = []
+    var viewHeight: CGFloat = 0
     
     // UI work
     
     func updateParentViewHeight () {
-        vcUniMain.updateLookup(height: 500)
-        return
         //self.preferredContentSize = NSSize(width: self.preferredContentSize.width, height: vRuler.frame.height)
         
         vcUniMain.cvDictLookup.wantsLayer = true
         vcUniMain.cvDictLookup.layer?.backgroundColor = NSColor.blue.cgColor
-        print(vRuler.frame.height)
-        vcUniMain._layout_cvDictLookupHeight.constant = 100 //vRuler.frame.height
+        
+        self.view.layoutSubtreeIfNeeded()
+        vcUniMain.view.layoutSubtreeIfNeeded()
+        if #available(OSX 10.12, *) {
+            NSAnimationContext.runAnimationGroup { (context) in
+                context.duration = 0.25
+                context.allowsImplicitAnimation = true
+                
+                vcUniMain._layout_cvDictLookupHeight.constant = viewHeight
+                vcUniMain.view.layoutSubtreeIfNeeded()
+            }
+        } else {
+            vcUniMain._layout_cvDictLookupHeight.animator().constant = viewHeight
+        }
+        
         self.view.frame = vcUniMain.cvDictLookup.bounds
-        vcUniMain.view.layout()
-        //
+        vcUniMain.updateWindowHeight(containerHeight: viewHeight)
     }
     
     func createLabel () -> NSTextField {
@@ -61,6 +75,7 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
         vDictResult.translatesAutoresizingMaskIntoConstraints = false
         vDictResult.subviews.removeAll()
         //vDictResult.removeConstraints(vDictResult!.constraints)
+        var curHeight: CGFloat = 0
         
         if (dictResults.count == 0) {
             //vDictResult.addConstraint(_layout_vDictResultHeight)
@@ -71,7 +86,6 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
             //vDictResult.removeConstraint(_layout_vDictResultHeight)
             var previousResultView: NSView = vDictResult
             var firstWord: Bool = true
-            var curHeight: CGFloat = 0
             for dictword in dictResults {
                 // Create the view for the key term
                 let resultView = NSView()
@@ -91,22 +105,36 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
                 let lbTerm: NSTextField = createLabel()
                 lbTerm.translatesAutoresizingMaskIntoConstraints = false
                 lbTerm.stringValue = dictword.term
-                lbTerm.textColor = NSColor.black
+                lbTerm.textColor = NSColor(cgColor: colorGrayTextTitle)
+                lbTerm.usesSingleLineMode = true
                 resultView.addSubview(lbTerm)
+                resultView.addConstraint(NSLayoutConstraint(item: lbTerm, attribute: .top, relatedBy: .equal, toItem: resultView, attribute: .top, multiplier: 1, constant: _lcDictWordLabeMarginVer))
+                resultView.addConstraint(NSLayoutConstraint(item: resultView, attribute: .leading, relatedBy: .equal, toItem: lbTerm, attribute: .leading, multiplier: 1, constant: -_lcDictWordLabeMarginHor))
+                resultView.addConstraint(NSLayoutConstraint(item: resultView, attribute: .trailing, relatedBy: .equal, toItem: lbTerm, attribute: .trailing, multiplier: 1, constant: _lcDictWordLabeMarginHor))
                 
-                resultView.addConstraint(NSLayoutConstraint(item: lbTerm, attribute: .top, relatedBy: .equal, toItem: resultView, attribute: .top, multiplier: 1, constant: 4))
-                resultView.addConstraint(NSLayoutConstraint(item: resultView, attribute: .leading, relatedBy: .equal, toItem: lbTerm, attribute: .leading, multiplier: 1, constant: -4))
-                resultView.addConstraint(NSLayoutConstraint(item: resultView, attribute: .trailing, relatedBy: .equal, toItem: lbTerm, attribute: .trailing, multiplier: 1, constant: 4))
+                let lbDef: NSTextField = createLabel()
+                lbDef.translatesAutoresizingMaskIntoConstraints = false
+                lbDef.stringValue = dictword.plain.trimmingCharacters(in: .whitespacesAndNewlines)
+                lbDef.textColor = NSColor(cgColor: colorGrayTextBody)
+                lbDef.usesSingleLineMode = true
+                resultView.addSubview(lbDef)
+                resultView.addConstraint(NSLayoutConstraint(item: lbDef, attribute: .top, relatedBy: .equal, toItem: lbTerm, attribute: .bottom, multiplier: 1, constant: _lcDictWordLabeMarginBetw))
+                resultView.addConstraint(NSLayoutConstraint(item: resultView, attribute: .leading, relatedBy: .equal, toItem: lbDef, attribute: .leading, multiplier: 1, constant: -_lcDictWordLabeMarginHor))
+                resultView.addConstraint(NSLayoutConstraint(item: resultView, attribute: .trailing, relatedBy: .equal, toItem: lbDef, attribute: .trailing, multiplier: 1, constant: _lcDictWordLabeMarginHor))
+                
+                if (dictword.term == "train")
+                { print(dictword.term)
+                    print(dictword.plain)}
  
                 // Last step
                 previousResultView = resultView
                 firstWord = false
             }
             _layout_vDictResultHeight.constant = curHeight
-            //vDictResult.addConstraint(NSLayoutConstraint(item: previousResultView, attribute: .bottom, relatedBy: .equal, toItem: vDictResult, attribute: .bottom, multiplier: 1, constant: 0))
-            print("done")
-            //vDictResult.layout()
+            vDictResult.layoutSubtreeIfNeeded()
         }
+        
+        viewHeight = vSearch.frame.height + curHeight
         
         // Update parent viewcontroller
         updateParentViewHeight()
@@ -118,7 +146,7 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
         v_tfSearch.wantsLayer = true
         tfSearch.wantsLayer = true
         
-        self.view.layer?.backgroundColor = CGColor.black
+        self.view.layer?.backgroundColor = CGColor.white
         v_tfSearch.layer?.backgroundColor = colorLightGray1
         v_tfSearch.layer?.cornerRadius = 4
         
@@ -158,7 +186,6 @@ class frmDictLookup: NSViewController, NSTextFieldDelegate {
         if (tfSearch.stringValue != "") {
             if let json = dictQuery(pattern: tfSearch.stringValue.trimmingCharacters(in: .whitespacesAndNewlines) + "*") {
                 for item in json {
-                    print(item.key)
                     let dictword: DictWord = DictWord(word: item.key, definition: item.value)
                     dictResults.append(dictword)
                 }

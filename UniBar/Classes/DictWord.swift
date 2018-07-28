@@ -16,7 +16,8 @@ class DictWord {
     init(word: String, definition: String) {
         term = word
         def.append(definition)
-        plain = definition.html2String
+        plain = definition.html2String.trimmingCharacters(in: .whitespacesAndNewlines)
+        plain = plain.replacingOccurrences(of: "\n", with: " ")
     }
 }
 

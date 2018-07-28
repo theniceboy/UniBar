@@ -789,11 +789,11 @@
             <objects>
                 <viewController title="menu" identifier="frmUniMain" storyboardIdentifier="frmUniMain" id="gjR-6G-kDp" customClass="frmUniMain" customModule="UniBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" appearanceType="aqua" id="uHj-MW-iuh">
-                        <rect key="frame" x="0.0" y="0.0" width="425" height="613"/>
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="887"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="rHY-V1-JIk">
-                                <rect key="frame" x="0.0" y="0.0" width="425" height="613"/>
+                                <rect key="frame" x="0.0" y="0.0" width="425" height="887"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-Ok-GKN" customClass="FlatButton" customModule="UniBar" customModuleProvider="target">
                                         <rect key="frame" x="2" y="1" width="91" height="32"/>
@@ -878,7 +878,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="Clz-md-VBq">
-                                        <rect key="frame" x="0.0" y="221" width="425" height="392"/>
+                                        <rect key="frame" x="0.0" y="445" width="425" height="392"/>
                                         <subviews>
                                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="OG1-uX-NWt">
                                                 <rect key="frame" x="0.0" y="-4128" width="425" height="4520"/>
@@ -901,7 +901,7 @@
                                     <constraint firstAttribute="bottom" secondItem="TLX-Ok-GKN" secondAttribute="bottom" constant="8" id="Qt2-Dk-lWs"/>
                                     <constraint firstItem="TLX-Ok-GKN" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" constant="8" id="Wre-nc-DKc"/>
                                     <constraint firstAttribute="trailing" secondItem="yhA-BO-Llf" secondAttribute="trailing" constant="8" id="nl6-S1-QvP"/>
-                                    <constraint firstItem="Clz-md-VBq" firstAttribute="top" secondItem="rHY-V1-JIk" secondAttribute="top" id="uGr-mj-Bj4"/>
+                                    <constraint firstItem="Clz-md-VBq" firstAttribute="top" secondItem="rHY-V1-JIk" secondAttribute="top" constant="50" id="uGr-mj-Bj4"/>
                                     <constraint firstItem="Clz-md-VBq" firstAttribute="leading" secondItem="rHY-V1-JIk" secondAttribute="leading" id="vG7-IK-zNv"/>
                                 </constraints>
                             </customView>
@@ -925,7 +925,7 @@
                 </viewController>
                 <customObject id="2eS-YT-yBA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42.5" y="432.5"/>
+            <point key="canvasLocation" x="42.5" y="569.5"/>
         </scene>
         <!--Frm Dict Lookup-->
         <scene sceneID="T6i-RC-x6J">
@@ -943,7 +943,7 @@
                                     </customView>
                                     <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-Wc-cuC">
                                         <rect key="frame" x="18" y="40" width="414" height="20"/>
-                                        <textFieldCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" placeholderString="Type to Search" id="9PP-jD-hlR">
+                                        <textFieldCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" placeholderString="Type to Search" usesSingleLineMode="YES" id="9PP-jD-hlR">
                                             <font key="font" metaFont="system" size="15"/>
                                             <color key="textColor" red="0.37242227160000002" green="0.37242227160000002" blue="0.37242227160000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -973,20 +973,20 @@
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="yhj-bm-b7c">
-                                <rect key="frame" x="0.0" y="210" width="450" height="194"/>
+                                <rect key="frame" x="0.0" y="218" width="450" height="194"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="194" id="2Ic-4m-VJq"/>
                                 </constraints>
                             </customView>
                             <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJZ-RT-2Qh">
-                                <rect key="frame" x="253" y="210" width="197" height="287"/>
+                                <rect key="frame" x="253" y="218" width="197" height="279"/>
                             </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="CJZ-RT-2Qh" firstAttribute="bottom" secondItem="yhj-bm-b7c" secondAttribute="bottom" id="6FD-mI-Vg1"/>
                             <constraint firstAttribute="trailing" secondItem="CJZ-RT-2Qh" secondAttribute="trailing" id="7c8-Zo-PVe"/>
                             <constraint firstItem="3Kj-iQ-ien" firstAttribute="leading" secondItem="tHX-3u-Xnb" secondAttribute="leading" id="B1M-o0-cDQ"/>
-                            <constraint firstItem="yhj-bm-b7c" firstAttribute="top" secondItem="3Kj-iQ-ien" secondAttribute="bottom" constant="8" id="Fvn-KS-EHZ"/>
+                            <constraint firstItem="yhj-bm-b7c" firstAttribute="top" secondItem="3Kj-iQ-ien" secondAttribute="bottom" id="Fvn-KS-EHZ"/>
                             <constraint firstAttribute="trailing" secondItem="yhj-bm-b7c" secondAttribute="trailing" id="OcO-jZ-wvV"/>
                             <constraint firstItem="3Kj-iQ-ien" firstAttribute="top" secondItem="tHX-3u-Xnb" secondAttribute="top" id="Voa-54-XLo"/>
                             <constraint firstAttribute="trailing" secondItem="3Kj-iQ-ien" secondAttribute="trailing" id="W53-Vp-Bzh"/>

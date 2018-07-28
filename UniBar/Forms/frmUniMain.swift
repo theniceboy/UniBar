@@ -29,7 +29,7 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
     // Initialization
     func uiInitialization () {
         self.view.wantsLayer = true
-        self.view.layer?.backgroundColor = CGColor.white
+        self.view.layer?.backgroundColor = NSColor.yellow.cgColor
     }
     
     /*
@@ -51,6 +51,13 @@ class frmUniMain: NSViewController, NSTextFieldDelegate {
  
  })
  */
+    
+    public func updateWindowHeight(containerHeight: CGFloat) {
+        let newHeight = containerHeight + 400
+        let newOrigin = getWindowOriginWithSize(newSize: NSSize(width: self.view.frame.width, height: newHeight))
+        windowUniMain.window?.setFrame(NSRect(x: newOrigin.x, y: newOrigin.y, width: (windowUniMain.window?.frame.width)!, height: newHeight), display: true, animate: true)
+        //self.preferredContentSize = NSSize(width: self.preferredContentSize.width, height: containerHeight + 400)
+    }
     
     public func updateLookup (height: CGFloat) {
         _layout_cvDictLookupHeight.constant = height

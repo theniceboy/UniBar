@@ -13,7 +13,7 @@ dict = {}
 query_type = sys.argv[2]
 query_word = sys.argv[3].strip()
 
-builder = IndexBuilder('/Users/david/Desktop/lw.mdx')
+builder = IndexBuilder('/Users/david/Desktop/G/ciku/Longman Dictionary of Contemporary English.mdx')
 
 if query_type == "key":
     dict[query_word] = builder.mdx_lookup(query_word, True)

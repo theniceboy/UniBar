@@ -16,6 +16,10 @@ let UnibarIcon = NSStatusBar.system.statusItem(withLength: NSStatusItem.variable
 var windowUniMain: NSWindowController = NSWindowController()
 var _previousActivatedApp: NSRunningApplication!
 
+func getWindowOriginWithSize(newSize: NSSize) -> NSPoint {
+    return NSPoint(x: (NSScreen.main?.visibleFrame.origin.x)! + (NSScreen.main?.visibleFrame.size.width)! - (newSize.width), y: (NSScreen.main?.visibleFrame.origin.y)! + (NSScreen.main?.visibleFrame.size.height)! - (newSize.height))
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldDelegate {
     
@@ -51,6 +55,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
         }
     }
     
+    
     @objc func openUnibar (btn: NSStatusBarButton) {
         // Save previously activated app
         _previousActivatedApp = NSWorkspace.shared.frontmostApplication
@@ -61,9 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
         windowUniMain.window?.makeKeyAndOrderFront(self)
         windowUniMain.window?.level = NSWindow.Level(rawValue: Int(CGWindowLevelForKey(.mainMenuWindow)))
         windowUniMain.window?.collectionBehavior = [.stationary, .ignoresCycle, .canJoinAllSpaces, .fullScreenAuxiliary]
-        windowUniMain.window?.setFrameOrigin(NSPoint(
-            x: (NSScreen.main?.visibleFrame.origin.x)! + (NSScreen.main?.visibleFrame.size.width)! - (windowUniMain.window?.frame.size.width)!,
-            y: (NSScreen.main?.visibleFrame.origin.y)! + (NSScreen.main?.visibleFrame.size.height)! - (windowUniMain.window?.frame.size.height)!))
+        windowUniMain.window?.setFrameOrigin(getWindowOriginWithSize(newSize: NSSize(width: (windowUniMain.window?.frame.size.width)!, height: (windowUniMain.window?.frame.size.height)!)))
         windowUniMain.window?.makeKey()
         
         // Visual initialization of the window
@@ -71,6 +74,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSTextFieldD
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
+        print("top".run())
+        
         
         // Create & assign viewcontrollers
         vcUniMain = frmUniMain.freshController()
