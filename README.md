@@ -1,3 +1,4 @@
 # UniBar
 
-A description of this package.
+## In development
+## The ultimate macOS menubar app
